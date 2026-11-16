@@ -293,6 +293,27 @@ textarea:focus-visible {
     padding-right: 0.4rem;
 }
 
+/* Audio sample at the top of a story modal.
+   color-scheme: dark asks the browser to draw its built-in player in dark colours,
+   so it sits on the near-black modal. Brass on near-black passes contrast (6.1:1). */
+.story-audio {
+    margin: 0 0 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--brass);
+}
+
+.story-audio figcaption {
+    color: var(--brass);
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+.story-audio audio {
+    display: block;
+    width: 100%;
+    color-scheme: dark;
+}
+
 /* 9. Dark panel (coming soon, newsletter)
    -------------------------------------------------------------------------- */
 .panel-dark {

@@ -197,6 +197,16 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Audio sample: the author reading the text below, which also serves as its transcript.
+                         Audible Exclusive allows up to 8 minutes of excerpts in total for this book (10% of 1 hr 20 min).
+                         preload="none" means the audio only downloads when the visitor presses play.
+                         assets/js/story-audio.js stops it when the pop-up closes. -->
+                    <figure class="story-audio">
+                        <figcaption>Listen to the opening, read by the author</figcaption>
+                        <audio controls preload="none" src="assets/audio/crow-girl-sample.m4a">
+                            Your browser does not support audio. <a href="assets/audio/crow-girl-sample.m4a">Download the Crow Girl sample</a>.
+                        </audio>
+                    </figure>
                     <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
                     <p>I was a foundling brat, rescued from the hedgerows where I lay with my beak open, screeching fit to wake the devil. I often think it very likely the first thing I ever saw was a bird in its nest. The people here are thin-mouthed and hard-fisted; you&rsquo;re as likely to get a stone as a piece of bread from them. Still, the Wattses took me in, as they had neither chick nor child. Jonah said to his wife Sally that having another pair of hands would be useful.</p>
                     <p>As I grew up, I couldn&rsquo;t understand what was being said to me: all I saw was beaks opening and closing. When I tried to speak, people laughed and called me &lsquo;Crow Girl&rsquo;. Jonah and Sally talked to me with gestures, and when that failed, cuffs to the head.</p>
@@ -350,6 +360,8 @@
 
     <!-- Bootstrap JavaScript: needed for the mobile menu and the story modals -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <!-- Stops a story's audio sample when its pop-up is closed -->
+    <script src="assets/js/story-audio.js"></script>
 </body>
 
 </html>

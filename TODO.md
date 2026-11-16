@@ -21,10 +21,14 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 ## Files to add
 
-- [ ] `assets/video/crow-girl.mp4`: the Crow Girl video (the player shows the poster picture until this exists)
-- [ ] `assets/video/crow-girl.vtt`: replace the example captions with the real ones
-- [ ] A still from the video to use as the poster, if you prefer it to the crow engraving
+- [ ] Decide whether to use the Amazon mobile video too (it is in the `wish-hounds-press-video-originals` folder, outside the site)
 - [ ] The corrected logo ("Wish Hounds Press"), saved over `assets/images/wish-hounds-press-logo.webp`
+
+## Audio samples
+
+- [x] Crow Girl sample (`assets/audio/crow-girl-sample.m4a`, 1:32) ends after "...from a single feather or an egg."
+- [ ] Audible Exclusive allows 8 minutes of excerpts in total. Crow Girl uses 1:32, leaving about 6:30 for the other five stories (up to about 1:15 each)
+- [ ] Full chapters are kept in `wish-hounds-press-audio-originals`, outside the site. Never put a full chapter in `assets/audio/`
 
 ## Decisions still open
 
