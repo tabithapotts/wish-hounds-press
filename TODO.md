@@ -14,7 +14,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 ## Links and services to connect
 
-- [ ] `index.html`: the three buy buttons (paperback, ebook, audiobook) still point to `#`
+- [ ] `index.html`: the ebook and audiobook buttons still point to `#` (add Amazon UK links with `?tag=mrstabithapot-21`). The paperback button links to IngramSpark
 - [ ] Footer on all three pages: Instagram and Facebook links still point to `#`
 - [ ] `contact.html`: paste your Web3Forms access key in place of `YOUR-ACCESS-KEY-HERE`
 - [ ] `about.html`: paste your Mailchimp form address into the newsletter form's `action`
@@ -32,7 +32,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 ## Decisions still open
 
-- [ ] Add the book cover beside the intro text?
+- [x] Add the book cover beside the intro text (done: beside the buy buttons)
 - [ ] Keep one row of six cards on very wide screens (1400px and up)?
 - [ ] Has your tutor approved a self-chosen project?
 

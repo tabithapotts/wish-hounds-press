@@ -240,6 +240,23 @@ textarea:focus-visible {
     object-fit: cover;
 }
 
+/* Book cover beside the buy buttons.
+   A fixed width keeps it small; height: auto keeps the cover's proportions.
+   The border and shadow lift it off the parchment like a real book. */
+.buy-cover {
+    width: 140px;
+    height: auto;
+    flex-shrink: 0; /* stops the cover being squeezed on narrow screens */
+    border: 1px solid var(--near-black);
+    box-shadow: 4px 4px 0 rgba(20, 17, 15, 0.25);
+}
+
+@media (min-width: 768px) {
+    .buy-cover {
+        width: 160px;
+    }
+}
+
 /* Reviews (in the hero and the Reviews section).
    Bootstrap's blockquote classes set the size; these lines add the old-book look:
    a brass rule down the left, italic quote text and a near-black source line. */

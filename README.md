@@ -53,6 +53,19 @@ It is built with HTML, CSS and Bootstrap for layout and responsiveness. The stru
 - A "coming soon" card previewing the next collection.
 - A featured *Crow Girl* video with controls, a poster image and captions, so the reader decides when to play it.
 
+<!-- DRAFT NOTES (16 November 2026): rewrite in your own words, update the bullets above to match, then delete this comment.
+
+Book page changes:
+- The Crow Girl video bullet above is out of date. The hero now shows the trailer for A Book of Short Stories in a portrait (9:16) frame, like a phone screen. It fills the width on a phone and is never taller than 80% of the screen on a laptop. It has no sound and needs no captions, because the story text appears on screen. A still from the video is the poster, and preload="none" means it only downloads when the visitor presses play.
+- The hero is kept short (blurb, one review and the buy buttons) so the buy buttons are visible without scrolling on a laptop.
+- An "About the stories" section above the cards introduces the themes and each story.
+- A "Reviews" section below the cards. Reviews use figure, blockquote and figcaption, with Bootstrap's blockquote classes.
+- Audio sample: the Crow Girl pop-up has a 1 minute 32 second sample of the author reading the opening, using the browser's built-in audio player. The written excerpt below it acts as a transcript, for accessibility. A short script (assets/js/story-audio.js) stops the audio when the pop-up closes.
+
+About page changes:
+- The author bio now includes the author's awards and shortlistings.
+-->
+
 **About page**
 
 - The imprint's story and the Devon legend behind its name, plus a short author bio.
@@ -118,6 +131,16 @@ To run it locally, clone the repository and open `index.html` in a browser.
 
 *(TODO: record the bugs you meet and how you fixed them, and list any that remain.)*
 
+<!-- DRAFT NOTES (16 November 2026): rewrite in your own words, then delete this comment.
+
+- Duplicate h1: adding the blurb created a second <h1> with the book title. A page should have one <h1>, as screen readers use it as the page's main title. Fixed by removing the second one.
+- figcaption inside blockquote: the reviews first had <figcaption> inside <blockquote>, which the W3C validator rejects, because a <figcaption> must sit directly inside a <figure>. Fixed by wrapping each review in a <figure> and moving the <figcaption> after the <blockquote>.
+- Prettier reformatting: saving index.html in VS Code reformatted the whole file, so the commit looked as if every line had changed. Fixed by committing the formatting on its own first, then the content changes, and formatting all three pages the same way.
+- Audio kept playing after a pop-up was closed. Fixed with assets/js/story-audio.js, which pauses the audio when Bootstrap closes the pop-up.
+- Video shape: a landscape (16:9) frame would have cropped the portrait trailer to a narrow strip. Fixed by changing the frame to 9:16 with a maximum height.
+- Video file size: the original trailer was 14.6 MB. Resizing it to 720 x 1280 brought it down to about 5 MB, which helps the Lighthouse performance score.
+-->
+
 ## Credits and attribution
 
 - Bootstrap 5.3.9, loaded from the jsDelivr CDN.
@@ -127,6 +150,13 @@ To run it locally, clone the repository and open `index.html` in a browser.
 
 *(TODO: list every external source, for example Bootstrap, any fonts, icons, images and the Web3Forms and Mailchimp services. Say where each came from.)*
 
+<!-- DRAFT NOTES (16 November 2026): check, rewrite in your own words, then delete this comment.
+
+- Book trailer: made by the author, originally for TikTok. The background music was removed before it was added to the site, because its copyright status was uncertain.
+- Crow Girl audio sample: read by the author, taken from the audiobook of A Book of Short Stories (Audible). Used under the ACX terms for Audible Exclusive titles, which allow verbatim excerpts of up to 10% of the audiobook's length on the rights holder's own website to promote it.
+- Reviews: William J Brown in Horrified Magazine, and I. Rosenfeld for the British Fantasy Society. Consider adding links to the original reviews.
+-->
+
 ## Declaration of AI use
 
 **Build notes for the declaration (delete once it is written):**
@@ -135,6 +165,26 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Claude converted the logo and the story title plates to WebP, and copied the opening paragraphs of each story from the print PDF into the modals.
 - Claude drafted the legend paragraph, the author bio and the privacy note. I need to check and rewrite these.
 - Everything changed after that date is my own work unless noted here.
+
+<!-- DRAFT NOTES (16 November 2026): rewrite in your own words for the declaration, then delete this comment.
+
+What Claude did on 16 November:
+- Suggested a portrait video frame, and wrote the HTML and CSS for it.
+- Edited the trailer: removed the music, cut the out-of-date end card, resized it to 720 x 1280, slowed it to two-thirds speed and made a poster still.
+- Checked the GitHub Pages file size limits and the ACX rules on audio excerpts for Audible Exclusive titles.
+- Cut and converted the Crow Girl audio sample, and wrote the audio player markup, styles and the script that stops the audio when a pop-up closes.
+- Reviewed my new blurb and reviews code, found two validator errors (a duplicate h1 and figcaption inside blockquote) and fixed them at my request.
+- Restructured the Book page at my request: short hero, new "About the stories" and "Reviews" sections, awards moved to the About page. Changed quotes to curly quotes and story titles to italics.
+- Split the work into separate commits, including a formatting-only commit.
+
+What I did and decided myself:
+- Chose to make the video portrait, to remove the music, to cut the end card and to slow the video down.
+- Wrote the blurb, story descriptions, awards paragraph and chose the reviews.
+- Narrated the audiobook, chose the length of the audio sample (to match the written excerpt) and confirmed the cut point by ear.
+- Decided the house style: curly quotes, italic titles and "Potts’".
+
+Reflection prompts for the course: where did AI save time (media editing, spotting validator errors)? Where did you need to check its work (the audio cut point it could not hear, the ACX terms)? How did it change your workflow?
+-->
 
 *(TODO: write this in your own words once the build is finished. Say which tools you used, what you used them for, and the decisions you made yourself. The course also asks for short reflections on AI in code creation, debugging and optimisation, and on its overall effect on your workflow.)*
 

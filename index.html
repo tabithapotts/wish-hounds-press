@@ -113,32 +113,49 @@
                 or listen.
               </p>
 
-              <!-- Buy buttons. TODO: replace each # with the retailer link (use your Amazon Associates links) -->
-              <div id="buy" class="d-flex flex-wrap gap-2 mb-3">
-                <a
-                  href="#"
-                  class="btn btn-buy"
-                  target="_blank"
-                  rel="noopener sponsored"
-                  aria-label="Buy the paperback (opens in a new tab)"
-                  >Buy the paperback</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline-ink"
-                  target="_blank"
-                  rel="noopener sponsored"
-                  aria-label="Buy the ebook for Kindle (opens in a new tab)"
-                  >Ebook</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline-ink"
-                  target="_blank"
-                  rel="noopener sponsored"
-                  aria-label="Buy the audiobook (opens in a new tab)"
-                  >Audiobook</a
-                >
+              <!-- Cover and buy buttons side by side, like a shop listing.
+                   The cover is near the top of the page, so it is not lazy-loaded.
+                   width and height stop the page jumping while the image loads; CSS sets the display size. -->
+              <div
+                id="buy"
+                class="buy-box d-flex align-items-center gap-3 mb-3"
+              >
+                <img
+                  src="assets/images/a-book-of-short-stories-cover.webp"
+                  class="buy-cover"
+                  alt="Cover of A Book of Short Stories by Tabitha Potts: an engraving of a crow among thorny leaves"
+                  width="800"
+                  height="1132"
+                />
+                <!-- Buy buttons.
+                     Paperback: IngramSpark shop (buying direct). Not an affiliate link, so no rel="sponsored".
+                     Ebook and audiobook: Amazon UK, with the Associates tag (affiliate links, so rel="sponsored"). -->
+                <div class="d-flex flex-column align-items-start gap-2">
+                  <a
+                    href="https://shop.ingramspark.com/b/084?params=3UoKgWxhkJY9pJ4GdPnKQGRNNdxOSB5mHZyybCj7L5Z"
+                    class="btn btn-buy"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Buy the paperback direct from IngramSpark (opens in a new tab)"
+                    >Buy the paperback</a
+                  >
+                  <a
+                    href="https://www.amazon.co.uk/dp/B0D8HFVPBK?tag=mrstabithapot-21"
+                    class="btn btn-outline-ink"
+                    target="_blank"
+                    rel="noopener sponsored"
+                    aria-label="Buy the ebook for Kindle on Amazon (opens in a new tab)"
+                    >Ebook</a
+                  >
+                  <a
+                    href="https://www.amazon.co.uk/dp/B0CGVYDJV1?tag=mrstabithapot-21"
+                    class="btn btn-outline-ink"
+                    target="_blank"
+                    rel="noopener sponsored"
+                    aria-label="Buy the audiobook on Amazon (opens in a new tab)"
+                    >Audiobook</a
+                  >
+                </div>
               </div>
               <p class="small-print mb-0">
                 As an Amazon Associate, Wish Hounds Press earns from qualifying
