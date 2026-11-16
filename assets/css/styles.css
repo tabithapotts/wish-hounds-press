@@ -170,6 +170,40 @@ textarea:focus-visible {
 /* 5. Buttons
    -------------------------------------------------------------------------- */
 .btn {
+/* Tablets: a little more space between the nav links */
+@media (min-width: 768px) {
+    .navbar-nav {
+        gap: 0.75rem;
+    }
+}
+
+/* Large screens: the nav spans the same width as the right-hand column
+   of the Contact page (col-lg-5), so "Book" lines up with the start of that
+   column and the links spread out evenly across it.
+   container-type lets cqw measure the container's width:
+   100cqw is the full content width, and the column starts 7/12 of the way
+   across (allowing for Bootstrap's 1.5rem gutter). */
+@media (min-width: 992px) {
+    .site-header .navbar > .container {
+        container-type: inline-size;
+    }
+
+    .navbar-nav {
+        width: calc(100cqw - 7 / 12 * (100cqw + 1.5rem));
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    /* Remove the outer padding so the text sits on the column edges */
+    .navbar-expand-md .navbar-nav .nav-item:first-child .nav-link {
+        padding-left: 0;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-item:last-child .nav-link {
+        padding-right: 0;
+    }
+}
+
     font-family: var(--font-heading);
     font-size: 1.15rem;
     border-radius: 0;
