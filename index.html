@@ -46,7 +46,7 @@
 
     <main id="main">
 
-        <!-- ===== Hero: intro text on the left, Crow Girl video on the right ===== -->
+        <!-- ===== Hero: intro text on the left, trailer video on the right ===== -->
         <section class="section" aria-labelledby="hero-title">
             <div class="container">
                 <div class="row align-items-center gy-4">
@@ -68,18 +68,20 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <figure class="mb-0">
-                            <div class="ratio ratio-16x9 hero-video">
-                                <!-- TODO: save the video as assets/video/crow-girl.mp4 and write the captions in assets/video/crow-girl.vtt.
-                                     The poster is the picture shown before the video plays; swap it for a still from the video.
+                        <!-- Portrait (9:16) video, phone style. The frame is never taller than 80% of the screen. -->
+                        <figure class="mb-0 hero-figure">
+                            <div class="hero-video">
+                                <!-- The music has been removed from this video, so it has no sound and needs no captions
+                                     (the story text is shown on screen). It is 720 x 1280, slowed to two-thirds speed so the text is easier to read,
+                                     and ends before the old end card.
+                                     The poster is the picture shown before the video plays (a still from the video).
                                      preload="none" means the video only downloads when the visitor presses play. -->
-                                <video controls preload="none" poster="assets/images/crow-girl-poster.webp">
-                                    <source src="assets/video/crow-girl.mp4" type="video/mp4">
-                                    <track kind="captions" src="assets/video/crow-girl.vtt" srclang="en" label="English">
-                                    Your browser does not support video. <a href="assets/video/crow-girl.mp4">Download the Crow Girl video</a>.
+                                <video controls muted playsinline preload="none" poster="assets/images/short-stories-poster.jpg">
+                                    <source src="assets/video/short-stories.mp4" type="video/mp4">
+                                    Your browser does not support video. <a href="assets/video/short-stories.mp4">Download the trailer</a>.
                                 </video>
                             </div>
-                            <figcaption class="small-print mt-2">Watch the trailer for <em>Crow Girl</em>, one of the stories in the book.</figcaption>
+                            <figcaption class="small-print mt-2">Watch the trailer for <em>A Book of Short Stories</em>.</figcaption>
                         </figure>
                     </div>
                 </div>

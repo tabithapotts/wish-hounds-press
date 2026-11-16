@@ -218,12 +218,25 @@ textarea:focus-visible {
 
 /* 6. Hero (top of the Book page)
    -------------------------------------------------------------------------- */
+/* The video is portrait (9:16), like a phone screen.
+   Its width is whichever is smaller: the full column, or the width that makes
+   it 80% of the screen height. So it fills a phone but never overflows a laptop. */
+.hero-figure {
+    width: min(100%, calc(80vh * 9 / 16));
+    width: min(100%, calc(80svh * 9 / 16)); /* svh ignores the phone's address bar; older browsers use the line above */
+    margin-inline: auto;
+}
+
 .hero-video {
+    aspect-ratio: 9 / 16;
     border: 2px solid var(--near-black);
     background-color: var(--near-black);
 }
 
 .hero-video video {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
