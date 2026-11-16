@@ -240,6 +240,28 @@ textarea:focus-visible {
     object-fit: cover;
 }
 
+/* Reviews (in the hero and the Reviews section).
+   Bootstrap's blockquote classes set the size; these lines add the old-book look:
+   a brass rule down the left, italic quote text and a near-black source line. */
+.review {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--deep-brass);
+}
+
+.review .blockquote {
+    font-style: italic;
+}
+
+.review .blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.review .blockquote-footer {
+    color: var(--near-black);
+    margin-bottom: 0;
+}
+
 /* 7. Story cards
    -------------------------------------------------------------------------- */
 .story-card {
