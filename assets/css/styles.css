@@ -1,13 +1,397 @@
+/* ==========================================================================
+   Wish Hounds Press: custom styles
+   Bootstrap handles layout (grid, navbar, cards, modals).
+   This file handles the "old book" look: colours, fonts and small details.
+   ========================================================================== */
+
+/* 1. Colour variables
+   --------------------------------------------------------------------------
+   Change a colour here and it changes everywhere it is used.
+
+   Contrast rules (WCAG AA needs 4.5:1 for normal text):
+   - near-black on parchment and parchment on near-black: 13.8:1
+   - cover red on parchment: 5.3:1 (fine)
+   - deep teal and deep brass on parchment: about 4.5:1 (fine, just)
+   - brass on near-black: 6.1:1, cover teal on near-black: 4.9:1 (fine)
+   - DO NOT use cover red as text on near-black
+   - DO NOT use brass or cover teal as text on parchment
+   - DO NOT use deep teal as text on soft parchment (3.9:1)
+*/
+:root {
+    --parchment: #E8DCC0;
+    --soft-parchment: #D8CDB0;
+    --near-black: #14110F;
+    --cover-red: #B10034;
+    --deep-teal: #2F6B5C;
+    --deep-brass: #7A5C2E;
+    --brass: #B08D57;
+    --cover-teal: #468F7E;
+
+    --font-heading: "IM Fell English", Georgia, "Times New Roman", serif;
+    --font-body: "EB Garamond", Georgia, "Times New Roman", serif;
+}
+
+/* 2. Base
+   -------------------------------------------------------------------------- */
 body {
-    background-color: lightgrey;
-    background-image: url("../images/01-02-02_background-img.jpg");
+    background-color: var(--parchment);
+    color: var(--near-black);
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: var(--font-heading);
+}
+
+h1 {
+    font-size: 2.4rem;
 }
 
 h2 {
-    color:orangered
+    font-size: 1.9rem;
 }
 
-p {font-weight: bold}
-p.center {
-    text-align: center;
+a {
+    color: var(--deep-teal);
+}
+
+a:hover,
+a:focus {
+    color: var(--cover-red);
+}
+
+/* A clear focus outline for keyboard users */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cover-red);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+/* "Skip to main content" link: hidden until a keyboard user tabs to it */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background-color: var(--near-black);
+    color: var(--parchment);
+    padding: 0.5rem 1rem;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    left: 0;
+    color: var(--parchment);
+}
+
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.tagline {
+    color: var(--cover-red);
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.4rem;
+}
+
+.small-print {
+    font-size: 1rem;
+}
+
+/* 3. Ornamental divider
+   --------------------------------------------------------------------------
+   A plain rule with a printer's flower in the middle.
+   Swap this for the thorned vine artwork when it is ready.
+*/
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--near-black);
+    margin: 0 auto;
+    max-width: 30rem;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--near-black);
+}
+
+/* 4. Navbar
+   -------------------------------------------------------------------------- */
+.site-header {
+    border-bottom: 3px double var(--near-black);
+}
+
+.navbar-brand {
+    color: var(--near-black);
+    font-size: 1.5rem;
+}
+
+.navbar-brand img {
+    /* Lets the logo's white background blend into the parchment */
+    mix-blend-mode: multiply;
+}
+
+.navbar .nav-link {
+    color: var(--near-black);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+    color: var(--cover-red);
+}
+
+.navbar .nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+.navbar-toggler {
+    border-color: var(--near-black);
+}
+
+/* 5. Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    border-radius: 0;
+}
+
+/* Main call to action: parchment text on cover red (5.3:1) */
+.btn-buy {
+    background-color: var(--cover-red);
+    border: 2px solid var(--cover-red);
+    color: var(--parchment);
+}
+
+.btn-buy:hover,
+.btn-buy:focus {
+    background-color: var(--near-black);
+    border-color: var(--near-black);
+    color: var(--parchment);
+}
+
+/* Secondary button for use on parchment */
+.btn-outline-ink {
+    background-color: transparent;
+    border: 2px solid var(--near-black);
+    color: var(--near-black);
+}
+
+.btn-outline-ink:hover,
+.btn-outline-ink:focus {
+    background-color: var(--near-black);
+    color: var(--parchment);
+}
+
+/* Button for use on near-black cards and modals */
+.btn-brass {
+    background-color: transparent;
+    border: 2px solid var(--brass);
+    color: var(--parchment);
+}
+
+.btn-brass:hover,
+.btn-brass:focus {
+    background-color: var(--brass);
+    border-color: var(--brass);
+    color: var(--near-black);
+}
+
+/* 6. Hero (top of the Book page)
+   -------------------------------------------------------------------------- */
+.hero-video {
+    border: 2px solid var(--near-black);
+    background-color: var(--near-black);
+}
+
+.hero-video video {
+    object-fit: cover;
+}
+
+/* 7. Story cards
+   -------------------------------------------------------------------------- */
+.story-card {
+    background-color: var(--near-black);
+    color: var(--soft-parchment);
+    border: 1px solid var(--brass);
+    border-radius: 0;
+}
+
+.story-card .card-img-top {
+    /* Keeps every title plate the same shape, even if the files differ slightly */
+    aspect-ratio: 2 / 3;
+    height: auto;
+    object-fit: cover;
+    background-color: var(--near-black);
+    border-bottom: 3px solid var(--cover-teal);
+    border-radius: 0;
+}
+
+.story-card .card-title {
+    color: var(--parchment);
+    font-size: 1.5rem;
+}
+
+/* 8. Story modals
+   -------------------------------------------------------------------------- */
+.story-modal .modal-content {
+    background-color: var(--near-black);
+    color: var(--soft-parchment);
+    border: 1px solid var(--brass);
+    border-radius: 0;
+}
+
+.story-modal .modal-header,
+.story-modal .modal-footer {
+    border-color: var(--brass);
+}
+
+.story-modal .modal-title {
+    color: var(--parchment);
+    font-size: 1.7rem;
+}
+
+/* Drop cap on the first paragraph of each sample */
+.story-modal .modal-body p:first-of-type::first-letter {
+    color: var(--brass);
+    float: left;
+    font-family: var(--font-heading);
+    font-size: 3.4rem;
+    line-height: 0.9;
+    padding-right: 0.4rem;
+}
+
+/* 9. Dark panel (coming soon, newsletter)
+   -------------------------------------------------------------------------- */
+.panel-dark {
+    background-color: var(--near-black);
+    color: var(--soft-parchment);
+    border: 1px solid var(--brass);
+    padding: 2rem;
+}
+
+.panel-dark h2,
+.panel-dark h3 {
+    color: var(--parchment);
+}
+
+.panel-dark a {
+    color: var(--cover-teal);
+}
+
+.panel-dark a:hover,
+.panel-dark a:focus {
+    color: var(--parchment);
+}
+
+/* 10. About page
+   -------------------------------------------------------------------------- */
+.about-logo {
+    max-width: 18rem;
+    mix-blend-mode: multiply;
+}
+
+/* 11. Forms (newsletter and contact)
+   -------------------------------------------------------------------------- */
+.form-control,
+.form-select {
+    background-color: #fff;
+    border: 1px solid var(--near-black);
+    border-radius: 0;
+    color: var(--near-black);
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--cover-red);
+    box-shadow: none;
+}
+
+/* The success and error messages under the contact form */
+.form-message {
+    border: 2px solid var(--near-black);
+    border-radius: 0;
+    padding: 1rem;
+}
+
+.form-message-success {
+    background-color: var(--deep-teal);
+    color: var(--parchment);
+}
+
+.form-message-error {
+    background-color: var(--cover-red);
+    color: var(--parchment);
+}
+
+/* The trade information list */
+.trade-list dt {
+    font-family: var(--font-heading);
+    font-weight: normal;
+    color: var(--deep-brass);
+}
+
+/* 12. Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+    background-color: var(--near-black);
+    color: var(--soft-parchment);
+    border-top: 3px solid var(--brass);
+    font-size: 1.05rem;
+}
+
+.site-footer a {
+    color: var(--cover-teal);
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: var(--parchment);
+}
+
+/* 13. Larger screens
+   --------------------------------------------------------------------------
+   Mobile first: everything above is the phone layout.
+   These rules only add to it on wider screens.
+*/
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* When six cards sit in one row they are narrow, so the text is a little smaller */
+@media (min-width: 1400px) {
+    .story-card .card-title {
+        font-size: 1.3rem;
+    }
+
+    .story-card .card-text {
+        font-size: 1.05rem;
+    }
 }

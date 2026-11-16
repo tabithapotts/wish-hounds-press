@@ -49,7 +49,7 @@ It is built with HTML, CSS and Bootstrap for layout and responsiveness. The stru
 **Book page**
 
 - A hero section with the imprint logo, cover, blurb and buy buttons for print, ebook and audiobook, with an affiliate link disclosure. Readers can go straight to a retailer.
-- One card per story with an illustration, title and teaser. A "Read the introduction" button opens a Bootstrap modal, so readers can sample each story without leaving the page.
+- One card per story, showing that story's title plate from the book. A "Read a sample" button opens a Bootstrap modal with the opening of the story, so readers can sample each one without leaving the page.
 - A "coming soon" card previewing the next collection.
 - A featured *Crow Girl* video with controls, a poster image and captions, so the reader decides when to play it.
 
@@ -120,9 +120,21 @@ To run it locally, clone the repository and open `index.html` in a browser.
 
 ## Credits and attribution
 
+- Bootstrap 5.3.9, loaded from the jsDelivr CDN.
+- Google Fonts: IM Fell English and EB Garamond.
+- Story title plates and text from *A Book of Short Stories* by Tabitha Potts. The Crow Girl plate is credited in the book as "Illustration by Amy Shepheard".
+- Web3Forms (contact form) and Mailchimp (newsletter).
+
 *(TODO: list every external source, for example Bootstrap, any fonts, icons, images and the Web3Forms and Mailchimp services. Say where each came from.)*
 
 ## Declaration of AI use
+
+**Build notes for the declaration (delete once it is written):**
+
+- 15 November 2026: Claude (Anthropic) wrote the first version of `index.html`, `about.html`, `contact.html`, `assets/css/styles.css` and `assets/js/contact.js` from my brief, wireframes and colour palette.
+- Claude converted the logo and the story title plates to WebP, and copied the opening paragraphs of each story from the print PDF into the modals.
+- Claude drafted the legend paragraph, the author bio and the privacy note. I need to check and rewrite these.
+- Everything changed after that date is my own work unless noted here.
 
 *(TODO: write this in your own words once the build is finished. Say which tools you used, what you used them for, and the decisions you made yourself. The course also asks for short reflections on AI in code creation, debugging and optimisation, and on its overall effect on your workflow.)*
 
