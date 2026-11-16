@@ -111,23 +111,26 @@ textarea:focus-visible {
 
 /* 3. Ornamental divider
    --------------------------------------------------------------------------
-   A plain rule with a printer's flower in the middle.
-   Swap this for the thorned vine artwork when it is ready.
+   A thorny stem in the style of the cover's vines.
+   A small SVG tile (a gently curving stem with one thorn above and one below)
+   repeats along the line. It is used as a mask, so the colour comes from
+   background-color and stays tied to the palette variables.
+   The SVG is written into the CSS (a data URI) because browsers block masks
+   loaded from separate files when the site is opened straight from disk.
+   (A leaf cut from the cover is saved as assets/images/divider-leaf.webp
+   for possible use elsewhere.)
 */
 .divider {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--near-black);
-    margin: 0 auto;
+    height: 20px;
     max-width: 30rem;
-}
-
-.divider::before,
-.divider::after {
-    content: "";
-    flex: 1;
-    border-top: 1px solid var(--near-black);
+    margin: 0 auto;
+    background-color: var(--near-black);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='20' viewBox='0 0 64 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10C21 8 43 12 64 10' fill='none' stroke='black' stroke-width='3'/%3E%3Cpath d='M11 9.8Q19 7.8 26 0.8Q21 7.4 22.5 9.3Z'/%3E%3Cpath d='M41 10.7Q49 12.6 56 19.2Q51 12.7 52.5 10.7Z'/%3E%3C/svg%3E");
+    /* "round" stretches the tiles slightly so a whole number fits,
+       which avoids half-thorns at the ends */
+    mask-repeat: round no-repeat;
+    mask-size: 64px 20px;
+    mask-position: center;
 }
 
 /* 4. Navbar
@@ -167,9 +170,6 @@ textarea:focus-visible {
     border-color: var(--near-black);
 }
 
-/* 5. Buttons
-   -------------------------------------------------------------------------- */
-.btn {
 /* Tablets: a little more space between the nav links */
 @media (min-width: 768px) {
     .navbar-nav {
@@ -204,6 +204,9 @@ textarea:focus-visible {
     }
 }
 
+/* 5. Buttons
+   -------------------------------------------------------------------------- */
+.btn {
     font-family: var(--font-heading);
     font-size: 1.15rem;
     border-radius: 0;
@@ -304,6 +307,18 @@ textarea:focus-visible {
     font-style: italic;
 }
 
+/* Centred reviews: a side rule looks lopsided on centred text,
+   so use short brass rules above and below the quote instead. */
+.text-center .review {
+    padding: 1rem 0;
+    border-left: none;
+    border-top: 1px solid var(--deep-brass);
+    border-bottom: 1px solid var(--deep-brass);
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .review .blockquote p:last-child {
     margin-bottom: 0;
 }
@@ -341,18 +356,6 @@ textarea:focus-visible {
    -------------------------------------------------------------------------- */
 .story-modal .modal-content {
     background-color: var(--near-black);
-/* Centred reviews: a side rule looks lopsided on centred text,
-   so use short brass rules above and below the quote instead. */
-.text-center .review {
-    padding: 1rem 0;
-    border-left: none;
-    border-top: 1px solid var(--deep-brass);
-    border-bottom: 1px solid var(--deep-brass);
-    max-width: 34rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
     color: var(--soft-parchment);
     border: 1px solid var(--brass);
     border-radius: 0;
