@@ -95,6 +95,19 @@ Near-black on parchment and parchment on near-black both reach a contrast ratio 
 
 *(TODO, optional: add the colour palette image and wireframes.)*
 
+<!-- DRAFT NOTES (16 November 2026, layout session): rewrite in your own words, then delete this comment.
+
+Layout and decoration decisions:
+- Centred text on the Book page: the hero, "About the stories" and "Reviews" are centred, with the cover and buy buttons centred beneath the blurb. The story text in the pop-ups stays left-aligned, because long centred passages are harder to read.
+- Centred reviews: the brass rule down the left side looked lopsided on centred text, so centred reviews have short brass rules above and below the quote instead.
+- Story cards: more space between the cards (1.5rem instead of 1rem) and at the screen edges on tablets and larger (3rem instead of 1.5rem), so the grid feels less crowded.
+- Navigation: on large screens the nav links spread across the same width as the right-hand column of the Contact page, so "Book" lines up with the start of that column. On tablets the links have a little more space between them; on phones the collapsed menu is unchanged.
+- Thorny stem divider: the plain line between sections is now a thorny stem, drawn to match the vines on the cover. It is a small SVG pattern repeated along the line as a CSS mask, so its colour comes from the near-black palette variable.
+- Cover leaf: a leaf cut from the cover artwork (assets/images/divider-leaf.webp) was tried in the middle of the divider. The divider looked better as the stem alone, so the leaf is kept for use elsewhere.
+-->
+
+
+
 ## Deployment
 
 The site is deployed with GitHub Pages from the `main` branch.
@@ -139,6 +152,9 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Audio kept playing after a pop-up was closed. Fixed with assets/js/story-audio.js, which pauses the audio when Bootstrap closes the pop-up.
 - Video shape: a landscape (16:9) frame would have cropped the portrait trailer to a narrow strip. Fixed by changing the frame to 9:16 with a maximum height.
 - Video file size: the original trailer was 14.6 MB. Resizing it to 720 x 1280 brought it down to about 5 MB, which helps the Lighthouse performance score.
+- Gaps in the thorny stem: the repeated pattern showed gaps between each section, because the browser kept each tile's proportions when stretching it to fit. Fixed by adding preserveAspectRatio="none" to the SVG.
+- Half-thorns at the ends of the stem: the pattern was cut off part-way at each end. Fixed with mask-repeat: round, which stretches the tiles slightly so a whole number fits.
+- Masks blocked when opened from disk: browsers refuse to load a mask image from a separate file when the site is opened directly from the computer (file://). Fixed by writing the SVG into the CSS as a data URI.
 -->
 
 ## Credits and attribution
@@ -147,6 +163,7 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Google Fonts: IM Fell English and EB Garamond.
 - Story title plates and text from *A Book of Short Stories* by Tabitha Potts. The Crow Girl plate is credited in the book as "Illustration by Amy Shepheard".
 - Web3Forms (contact form) and Mailchimp (newsletter).
+- The leaf image (`assets/images/divider-leaf.webp`) is cut from the cover artwork of *A Book of Short Stories*. The thorny stem divider is drawn in the style of the cover's vines. *(TODO: add the cover artist's credit.)*
 
 *(TODO: list every external source, for example Bootstrap, any fonts, icons, images and the Web3Forms and Mailchimp services. Say where each came from.)*
 
@@ -182,6 +199,18 @@ What I did and decided myself:
 - Wrote the blurb, story descriptions, awards paragraph and chose the reviews.
 - Narrated the audiobook, chose the length of the audio sample (to match the written excerpt) and confirmed the cut point by ear.
 - Decided the house style: curly quotes, italic titles and "Potts’".
+
+What Claude did later on 16 November (layout session):
+- Created the 20 planning issues, labels and milestones on GitHub from my markdown file, and added them to the project board with a Priority field.
+- Centred the Book page text, added space around the story cards and spread out the navbar, at my request.
+- Cut a leaf from the cover artwork and made its background transparent, then drew the thorny stem divider in the style of the cover.
+- Checked the divider at desktop and phone widths with screenshots, and fixed the gaps and half-thorns it found.
+- Wrote the commit messages and split the work into separate commits.
+
+What I did and decided myself (layout session):
+- Supplied the planning issues, based on my Product Definition Challenge scores, and chose to track them on the project board. (TODO: say who drafted the issue text.)
+- Asked for centred text, more space around the cards and a wider navbar lined up with the second column.
+- Had the idea of reusing the cover artwork for the dividers, asked for a thorny stem, and chose the stem without the leaf.
 
 Reflection prompts for the course: where did AI save time (media editing, spotting validator errors)? Where did you need to check its work (the audio cut point it could not hear, the ACX terms)? How did it change your workflow?
 -->
