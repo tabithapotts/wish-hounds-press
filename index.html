@@ -1,367 +1,768 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wish Hounds Press is an independent horror imprint. Sample every story in A Book of Short Stories and find it in print, ebook and audiobook.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Wish Hounds Press is an independent horror imprint. Sample every story in A Book of Short Stories and find it in print, ebook and audiobook."
+    />
     <title>Wish Hounds Press | A Book of Short Stories</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
     <!-- Google Fonts: IM Fell English (headings) and EB Garamond (body text) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=IM+Fell+English:ital@0;1&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=IM+Fell+English:ital@0;1&amp;display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS first, then our own styles so that ours win -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <!-- ===== Header and navbar (the same on every page) ===== -->
     <header class="site-header">
-        <nav class="navbar navbar-expand-md" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <!-- TODO: swap in the corrected logo ("Wish Hounds Press") when it is ready -->
-                    <img src="assets/images/wish-hounds-press-logo.webp" alt="" width="56" height="56">
-                    Wish Hounds Press
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="main-nav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Book</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact and trade</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <!-- TODO: swap in the corrected logo ("Wish Hounds Press") when it is ready -->
+            <img
+              src="assets/images/wish-hounds-press-logo.webp"
+              alt=""
+              width="56"
+              height="56"
+            />
+            Wish Hounds Press
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Book</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact and trade</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main id="main">
+      <!-- ===== Hero: intro text on the left, trailer video on the right ===== -->
+      <section class="section" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+              <p class="tagline mb-1">Stories to haunt you</p>
+              <!-- TODO: check the book title -->
+              <h1 id="hero-title">A Book of Short Stories</h1>
+              <!-- TODO: replace with the book's blurb. If you add the cover image, it can sit beside this text. -->
+              <p>
+                [The blurb for the book goes here: two or three sentences that
+                set the mood and say what kind of stories these are.]
+              </p>
+              <p>
+                Sample every story below, then choose how you would like to read
+                or listen.
+              </p>
 
-        <!-- ===== Hero: intro text on the left, trailer video on the right ===== -->
-        <section class="section" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="row align-items-center gy-4">
-                    <div class="col-lg-6">
-                        <p class="tagline mb-1">Stories to haunt you</p>
-                        <!-- TODO: check the book title -->
-                        <h1 id="hero-title">A Book of Short Stories</h1>
-                        <!-- TODO: replace with the book's blurb. If you add the cover image, it can sit beside this text. -->
-                        <p>[The blurb for the book goes here: two or three sentences that set the mood and say what kind of stories these are.]</p>
-                        <p>Sample every story below, then choose how you would like to read or listen.</p>
+              <!-- Buy buttons. TODO: replace each # with the retailer link (use your Amazon Associates links) -->
+              <div id="buy" class="d-flex flex-wrap gap-2 mb-3">
+                <a
+                  href="#"
+                  class="btn btn-buy"
+                  target="_blank"
+                  rel="noopener sponsored"
+                  aria-label="Buy the paperback (opens in a new tab)"
+                  >Buy the paperback</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-outline-ink"
+                  target="_blank"
+                  rel="noopener sponsored"
+                  aria-label="Buy the ebook for Kindle (opens in a new tab)"
+                  >Ebook</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-outline-ink"
+                  target="_blank"
+                  rel="noopener sponsored"
+                  aria-label="Buy the audiobook (opens in a new tab)"
+                  >Audiobook</a
+                >
+              </div>
+              <p class="small-print mb-0">
+                As an Amazon Associate, Wish Hounds Press earns from qualifying
+                purchases.
+              </p>
+            </div>
 
-                        <!-- Buy buttons. TODO: replace each # with the retailer link (use your Amazon Associates links) -->
-                        <div id="buy" class="d-flex flex-wrap gap-2 mb-3">
-                            <a href="#" class="btn btn-buy" target="_blank" rel="noopener sponsored" aria-label="Buy the paperback (opens in a new tab)">Buy the paperback</a>
-                            <a href="#" class="btn btn-outline-ink" target="_blank" rel="noopener sponsored" aria-label="Buy the ebook for Kindle (opens in a new tab)">Ebook</a>
-                            <a href="#" class="btn btn-outline-ink" target="_blank" rel="noopener sponsored" aria-label="Buy the audiobook (opens in a new tab)">Audiobook</a>
-                        </div>
-                        <p class="small-print mb-0">As an Amazon Associate, Wish Hounds Press earns from qualifying purchases.</p>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <!-- Portrait (9:16) video, phone style. The frame is never taller than 80% of the screen. -->
-                        <figure class="mb-0 hero-figure">
-                            <div class="hero-video">
-                                <!-- The music has been removed from this video, so it has no sound and needs no captions
+            <div class="col-lg-6">
+              <!-- Portrait (9:16) video, phone style. The frame is never taller than 80% of the screen. -->
+              <figure class="mb-0 hero-figure">
+                <div class="hero-video">
+                  <!-- The music has been removed from this video, so it has no sound and needs no captions
                                      (the story text is shown on screen). It is 720 x 1280, slowed to two-thirds speed so the text is easier to read,
                                      and ends before the old end card.
                                      The poster is the picture shown before the video plays (a still from the video).
                                      preload="none" means the video only downloads when the visitor presses play. -->
-                                <video controls muted playsinline preload="none" poster="assets/images/short-stories-poster.jpg">
-                                    <source src="assets/video/short-stories.mp4" type="video/mp4">
-                                    Your browser does not support video. <a href="assets/video/short-stories.mp4">Download the trailer</a>.
-                                </video>
-                            </div>
-                            <figcaption class="small-print mt-2">Watch the trailer for <em>A Book of Short Stories</em>.</figcaption>
-                        </figure>
-                    </div>
+                  <video
+                    controls
+                    muted
+                    playsinline
+                    preload="none"
+                    poster="assets/images/short-stories-poster.jpg"
+                  >
+                    <source
+                      src="assets/video/short-stories.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support video.
+                    <a href="assets/video/short-stories.mp4"
+                      >Download the trailer</a
+                    >.
+                  </video>
                 </div>
+                <figcaption class="small-print mt-2">
+                  Watch the trailer for <em>A Book of Short Stories</em>.
+                </figcaption>
+              </figure>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <div class="divider" aria-hidden="true">&#10087;</div>
+      <div class="divider" aria-hidden="true">&#10087;</div>
 
-        <!-- ===== Story cards: 1 per row on phones, 2 on tablets, 3 on laptops, 6 on very wide screens ===== -->
-        <section class="section" aria-labelledby="stories-title">
-            <div class="container-fluid px-3 px-md-4">
-                <h2 id="stories-title" class="text-center mb-4">The stories</h2>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-6 g-3">
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <img src="assets/images/crow-girl.webp" class="card-img-top" alt="Title plate for Crow Girl: a white engraving of a crow holding a ribbon, on a dark ground" width="700" height="1066" loading="lazy">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title visually-hidden">Crow Girl</h3>
-                                <button type="button" class="btn btn-brass align-self-start" data-bs-toggle="modal" data-bs-target="#modal-crow-girl">
-                                    Read a sample<span class="visually-hidden"> of Crow Girl</span>
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <img src="assets/images/the-edge.webp" class="card-img-top" alt="Title plate for The Edge: a grassy clifftop above a curving bay, in black and white" width="700" height="1054" loading="lazy">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title visually-hidden">The Edge</h3>
-                                <button type="button" class="btn btn-brass align-self-start" data-bs-toggle="modal" data-bs-target="#modal-the-edge">
-                                    Read a sample<span class="visually-hidden"> of The Edge</span>
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <img src="assets/images/hagstone.webp" class="card-img-top" alt="Title plate for Hagstone: a small pale stone with a hole through it, on a dark ground" width="700" height="1055" loading="lazy">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title visually-hidden">Hagstone</h3>
-                                <button type="button" class="btn btn-brass align-self-start" data-bs-toggle="modal" data-bs-target="#modal-hagstone">
-                                    Read a sample<span class="visually-hidden"> of Hagstone</span>
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <img src="assets/images/the-bells-of-london-town.webp" class="card-img-top" alt="Title plate for The Bells of London Town: an engraving of a church and its graveyard" width="700" height="1053" loading="lazy">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title visually-hidden">The Bells of London Town</h3>
-                                <button type="button" class="btn btn-brass align-self-start" data-bs-toggle="modal" data-bs-target="#modal-the-bells-of-london-town">
-                                    Read a sample<span class="visually-hidden"> of The Bells of London Town</span>
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <img src="assets/images/the-djinn.webp" class="card-img-top" alt="Title plate for The Djinn: an engraving of a stone angel on a plinth, head bowed" width="700" height="1055" loading="lazy">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title visually-hidden">The Djinn</h3>
-                                <button type="button" class="btn btn-brass align-self-start" data-bs-toggle="modal" data-bs-target="#modal-the-djinn">
-                                    Read a sample<span class="visually-hidden"> of The Djinn</span>
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <img src="assets/images/the-gift.webp" class="card-img-top" alt="Title plate for The Gift: a small glass perfume bottle lying on its side, on a dark ground" width="700" height="1060" loading="lazy">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title visually-hidden">The Gift</h3>
-                                <button type="button" class="btn btn-brass align-self-start" data-bs-toggle="modal" data-bs-target="#modal-the-gift">
-                                    Read a sample<span class="visually-hidden"> of The Gift</span>
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-
+      <!-- ===== Story cards: 1 per row on phones, 2 on tablets, 3 on laptops, 6 on very wide screens ===== -->
+      <section class="section" aria-labelledby="stories-title">
+        <div class="container-fluid px-3 px-md-4">
+          <h2 id="stories-title" class="text-center mb-4">The stories</h2>
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-6 g-3"
+          >
+            <div class="col">
+              <article class="card story-card h-100">
+                <img
+                  src="assets/images/crow-girl.webp"
+                  class="card-img-top"
+                  alt="Title plate for Crow Girl: a white engraving of a crow holding a ribbon, on a dark ground"
+                  width="700"
+                  height="1066"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title visually-hidden">Crow Girl</h3>
+                  <button
+                    type="button"
+                    class="btn btn-brass align-self-start"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-crow-girl"
+                  >
+                    Read a sample<span class="visually-hidden">
+                      of Crow Girl</span
+                    >
+                  </button>
                 </div>
+              </article>
             </div>
-        </section>
 
-        <!-- ===== Coming soon ===== -->
-        <section class="section pt-0" aria-labelledby="coming-soon-title">
-            <div class="container">
-                <div class="panel-dark text-center">
-                    <h2 id="coming-soon-title">Coming soon</h2>
-                    <!-- TODO: add the title and a line about the next collection -->
-                    <p>[A line about the next collection from Wish Hounds Press.]</p>
-                    <p class="mb-0"><a href="about.html#newsletter">Join the newsletter</a> to hear when it is published.</p>
+            <div class="col">
+              <article class="card story-card h-100">
+                <img
+                  src="assets/images/the-edge.webp"
+                  class="card-img-top"
+                  alt="Title plate for The Edge: a grassy clifftop above a curving bay, in black and white"
+                  width="700"
+                  height="1054"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title visually-hidden">The Edge</h3>
+                  <button
+                    type="button"
+                    class="btn btn-brass align-self-start"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-the-edge"
+                  >
+                    Read a sample<span class="visually-hidden">
+                      of The Edge</span
+                    >
+                  </button>
                 </div>
+              </article>
             </div>
-        </section>
 
+            <div class="col">
+              <article class="card story-card h-100">
+                <img
+                  src="assets/images/hagstone.webp"
+                  class="card-img-top"
+                  alt="Title plate for Hagstone: a small pale stone with a hole through it, on a dark ground"
+                  width="700"
+                  height="1055"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title visually-hidden">Hagstone</h3>
+                  <button
+                    type="button"
+                    class="btn btn-brass align-self-start"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-hagstone"
+                  >
+                    Read a sample<span class="visually-hidden">
+                      of Hagstone</span
+                    >
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card story-card h-100">
+                <img
+                  src="assets/images/the-bells-of-london-town.webp"
+                  class="card-img-top"
+                  alt="Title plate for The Bells of London Town: an engraving of a church and its graveyard"
+                  width="700"
+                  height="1053"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title visually-hidden">
+                    The Bells of London Town
+                  </h3>
+                  <button
+                    type="button"
+                    class="btn btn-brass align-self-start"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-the-bells-of-london-town"
+                  >
+                    Read a sample<span class="visually-hidden">
+                      of The Bells of London Town</span
+                    >
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card story-card h-100">
+                <img
+                  src="assets/images/the-djinn.webp"
+                  class="card-img-top"
+                  alt="Title plate for The Djinn: an engraving of a stone angel on a plinth, head bowed"
+                  width="700"
+                  height="1055"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title visually-hidden">The Djinn</h3>
+                  <button
+                    type="button"
+                    class="btn btn-brass align-self-start"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-the-djinn"
+                  >
+                    Read a sample<span class="visually-hidden">
+                      of The Djinn</span
+                    >
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="card story-card h-100">
+                <img
+                  src="assets/images/the-gift.webp"
+                  class="card-img-top"
+                  alt="Title plate for The Gift: a small glass perfume bottle lying on its side, on a dark ground"
+                  width="700"
+                  height="1060"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title visually-hidden">The Gift</h3>
+                  <button
+                    type="button"
+                    class="btn btn-brass align-self-start"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-the-gift"
+                  >
+                    Read a sample<span class="visually-hidden">
+                      of The Gift</span
+                    >
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Coming soon ===== -->
+      <section class="section pt-0" aria-labelledby="coming-soon-title">
+        <div class="container">
+          <div class="panel-dark text-center">
+            <h2 id="coming-soon-title">Coming soon</h2>
+            <!-- TODO: add the title and a line about the next collection -->
+            <p>[A line about the next collection from Wish Hounds Press.]</p>
+            <p class="mb-0">
+              <a href="about.html#newsletter">Join the newsletter</a> to hear
+              when it is published.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ===== Story modals: one per card. Each id matches the data-bs-target on its button. ===== -->
 
     <!-- Modal: Crow Girl -->
-    <div class="modal fade story-modal" id="modal-crow-girl" tabindex="-1" aria-labelledby="modal-crow-girl-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modal-crow-girl-title">Crow Girl</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Audio sample: the author reading the text below, which also serves as its transcript.
+    <div
+      class="modal fade story-modal"
+      id="modal-crow-girl"
+      tabindex="-1"
+      aria-labelledby="modal-crow-girl-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-crow-girl-title">Crow Girl</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Audio sample: the author reading the text below, which also serves as its transcript.
                          Audible Exclusive allows up to 8 minutes of excerpts in total for this book (10% of 1 hr 20 min).
                          preload="none" means the audio only downloads when the visitor presses play.
                          assets/js/story-audio.js stops it when the pop-up closes. -->
-                    <figure class="story-audio">
-                        <figcaption>Listen to the opening, read by the author</figcaption>
-                        <audio controls preload="none" src="assets/audio/crow-girl-sample.m4a">
-                            Your browser does not support audio. <a href="assets/audio/crow-girl-sample.m4a">Download the Crow Girl sample</a>.
-                        </audio>
-                    </figure>
-                    <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
-                    <p>I was a foundling brat, rescued from the hedgerows where I lay with my beak open, screeching fit to wake the devil. I often think it very likely the first thing I ever saw was a bird in its nest. The people here are thin-mouthed and hard-fisted; you&rsquo;re as likely to get a stone as a piece of bread from them. Still, the Wattses took me in, as they had neither chick nor child. Jonah said to his wife Sally that having another pair of hands would be useful.</p>
-                    <p>As I grew up, I couldn&rsquo;t understand what was being said to me: all I saw was beaks opening and closing. When I tried to speak, people laughed and called me &lsquo;Crow Girl&rsquo;. Jonah and Sally talked to me with gestures, and when that failed, cuffs to the head.</p>
-                    <p>I understood I had to work hard to earn my keep and I became a silent, frightened thing. I learned to read and write a little, from looking at any picture books and papers that I could get my hands on, but I couldn&rsquo;t speak.</p>
-                    <p>My friends were the birds. I spent so much time in the woods with them I knew where they built all their nests, when they arrived in Spring and when they would leave for Winter. The only things I didn&rsquo;t know about them were their songs, but I could recognise every one from a single feather or an egg.</p>
-                    <p class="small-print mb-0"><em>The story continues in the book.</em></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-brass" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+            <figure class="story-audio">
+              <figcaption>Listen to the opening, read by the author</figcaption>
+              <audio
+                controls
+                preload="none"
+                src="assets/audio/crow-girl-sample.m4a"
+              >
+                Your browser does not support audio.
+                <a href="assets/audio/crow-girl-sample.m4a"
+                  >Download the Crow Girl sample</a
+                >.
+              </audio>
+            </figure>
+            <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
+            <p>
+              I was a foundling brat, rescued from the hedgerows where I lay
+              with my beak open, screeching fit to wake the devil. I often think
+              it very likely the first thing I ever saw was a bird in its nest.
+              The people here are thin-mouthed and hard-fisted; you&rsquo;re as
+              likely to get a stone as a piece of bread from them. Still, the
+              Wattses took me in, as they had neither chick nor child. Jonah
+              said to his wife Sally that having another pair of hands would be
+              useful.
+            </p>
+            <p>
+              As I grew up, I couldn&rsquo;t understand what was being said to
+              me: all I saw was beaks opening and closing. When I tried to
+              speak, people laughed and called me &lsquo;Crow Girl&rsquo;. Jonah
+              and Sally talked to me with gestures, and when that failed, cuffs
+              to the head.
+            </p>
+            <p>
+              I understood I had to work hard to earn my keep and I became a
+              silent, frightened thing. I learned to read and write a little,
+              from looking at any picture books and papers that I could get my
+              hands on, but I couldn&rsquo;t speak.
+            </p>
+            <p>
+              My friends were the birds. I spent so much time in the woods with
+              them I knew where they built all their nests, when they arrived in
+              Spring and when they would leave for Winter. The only things I
+              didn&rsquo;t know about them were their songs, but I could
+              recognise every one from a single feather or an egg.
+            </p>
+            <p class="small-print mb-0">
+              <em>The story continues in the book.</em>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-brass" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal: The Edge -->
-    <div class="modal fade story-modal" id="modal-the-edge" tabindex="-1" aria-labelledby="modal-the-edge-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modal-the-edge-title">The Edge</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
-                    <p>There&rsquo;s not much to do in the caravan park, and Mum says me and Alannah should go out for a walk, she needs to get on and make our dinner. Alannah&rsquo;s been quiet all afternoon, sulking most likely. She&rsquo;s lying on our bed in the back of the caravan, playing on her phone. I don&rsquo;t mind sharing the room with her normally, we have a laugh, but I&rsquo;m starting to wish I hadn&rsquo;t invited her to come with us.</p>
-                    <p>&lsquo;Come on then. Let&rsquo;s go up the cliff.&rsquo; &lsquo;I&rsquo;m tired. And I&rsquo;ve got sunburn.&rsquo;</p>
-                    <p>She turns over on the bed, her back towards me so I can see how pink she is, and sighs.</p>
-                    <p>&lsquo;I&rsquo;ll give you some money, Jasmine,&rsquo; Mum goes. &lsquo;You can both get some drinks in that caf&eacute;.&rsquo;</p>
-                    <p class="small-print mb-0"><em>The story continues in the book.</em></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-brass" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade story-modal"
+      id="modal-the-edge"
+      tabindex="-1"
+      aria-labelledby="modal-the-edge-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-the-edge-title">The Edge</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
+            <p>
+              There&rsquo;s not much to do in the caravan park, and Mum says me
+              and Alannah should go out for a walk, she needs to get on and make
+              our dinner. Alannah&rsquo;s been quiet all afternoon, sulking most
+              likely. She&rsquo;s lying on our bed in the back of the caravan,
+              playing on her phone. I don&rsquo;t mind sharing the room with her
+              normally, we have a laugh, but I&rsquo;m starting to wish I
+              hadn&rsquo;t invited her to come with us.
+            </p>
+            <p>
+              &lsquo;Come on then. Let&rsquo;s go up the cliff.&rsquo;
+              &lsquo;I&rsquo;m tired. And I&rsquo;ve got sunburn.&rsquo;
+            </p>
+            <p>
+              She turns over on the bed, her back towards me so I can see how
+              pink she is, and sighs.
+            </p>
+            <p>
+              &lsquo;I&rsquo;ll give you some money, Jasmine,&rsquo; Mum goes.
+              &lsquo;You can both get some drinks in that caf&eacute;.&rsquo;
+            </p>
+            <p class="small-print mb-0">
+              <em>The story continues in the book.</em>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-brass" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal: Hagstone -->
-    <div class="modal fade story-modal" id="modal-hagstone" tabindex="-1" aria-labelledby="modal-hagstone-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modal-hagstone-title">Hagstone</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
-                    <p>The pebbles crunched beneath her feet. She was walking below the dunes, close to the sea&rsquo;s edge. Seaweed lay around, flung into position by the advancing waves. Over towards the horizon she could see the revolving arms of the wind farm, back towards the village of Cley were the marshes and a couple of birdwatchers, intently photographing what looked to her eyes like a very unremarkable flock of tiny brown birds.</p>
-                    <p>It was cold and the sky was a steely grey, a North wind whipped past her from the ocean, lashing up fierce-looking surf. She had prepared herself for cold weather and was wearing a cable knit sweater and a navy blue quilted jacket &ndash; sturdy and practical. Now she felt a wave of warmth sweep up her body and little prickles of perspiration started under her arms. She ripped open the jacket, enjoying the cool sensation of the air on her flushed face and neck.</p>
-                    <p class="small-print mb-0"><em>The story continues in the book.</em></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-brass" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade story-modal"
+      id="modal-hagstone"
+      tabindex="-1"
+      aria-labelledby="modal-hagstone-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-hagstone-title">Hagstone</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
+            <p>
+              The pebbles crunched beneath her feet. She was walking below the
+              dunes, close to the sea&rsquo;s edge. Seaweed lay around, flung
+              into position by the advancing waves. Over towards the horizon she
+              could see the revolving arms of the wind farm, back towards the
+              village of Cley were the marshes and a couple of birdwatchers,
+              intently photographing what looked to her eyes like a very
+              unremarkable flock of tiny brown birds.
+            </p>
+            <p>
+              It was cold and the sky was a steely grey, a North wind whipped
+              past her from the ocean, lashing up fierce-looking surf. She had
+              prepared herself for cold weather and was wearing a cable knit
+              sweater and a navy blue quilted jacket &ndash; sturdy and
+              practical. Now she felt a wave of warmth sweep up her body and
+              little prickles of perspiration started under her arms. She ripped
+              open the jacket, enjoying the cool sensation of the air on her
+              flushed face and neck.
+            </p>
+            <p class="small-print mb-0">
+              <em>The story continues in the book.</em>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-brass" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal: The Bells of London Town -->
-    <div class="modal fade story-modal" id="modal-the-bells-of-london-town" tabindex="-1" aria-labelledby="modal-the-bells-of-london-town-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modal-the-bells-of-london-town-title">The Bells of London Town</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
-                    <p>I am a campanologist. That is to say, a student in the ancient art of ringing church bells. It&rsquo;s been several years since this pastime, I suppose you would call it, entered my life.</p>
-                    <p>It had been a long day in the glass tower in Canary Wharf where I&rsquo;m based. I&rsquo;ve given up telling people what I do for a living as their eyes tend to glaze over with boredom, but yes, I make myself, and my bank, a lot of money.</p>
-                    <p>I had been staring at my screens since 5 a.m. It felt as if I hadn&rsquo;t blinked even once. Come evening, my eyes felt dry and gritty.</p>
-                    <p>&ldquo;How&rsquo;s it going?&rdquo; asked Joe Wharton, a trader at a desk immediately adjacent to mine and for whom I have a particular distaste. His smug smile suggested he&rsquo;d had a good day.</p>
-                    <p class="small-print mb-0"><em>The story continues in the book.</em></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-brass" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade story-modal"
+      id="modal-the-bells-of-london-town"
+      tabindex="-1"
+      aria-labelledby="modal-the-bells-of-london-town-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-the-bells-of-london-town-title">
+              The Bells of London Town
+            </h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
+            <p>
+              I am a campanologist. That is to say, a student in the ancient art
+              of ringing church bells. It&rsquo;s been several years since this
+              pastime, I suppose you would call it, entered my life.
+            </p>
+            <p>
+              It had been a long day in the glass tower in Canary Wharf where
+              I&rsquo;m based. I&rsquo;ve given up telling people what I do for
+              a living as their eyes tend to glaze over with boredom, but yes, I
+              make myself, and my bank, a lot of money.
+            </p>
+            <p>
+              I had been staring at my screens since 5 a.m. It felt as if I
+              hadn&rsquo;t blinked even once. Come evening, my eyes felt dry and
+              gritty.
+            </p>
+            <p>
+              &ldquo;How&rsquo;s it going?&rdquo; asked Joe Wharton, a trader at
+              a desk immediately adjacent to mine and for whom I have a
+              particular distaste. His smug smile suggested he&rsquo;d had a
+              good day.
+            </p>
+            <p class="small-print mb-0">
+              <em>The story continues in the book.</em>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-brass" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal: The Djinn -->
-    <div class="modal fade story-modal" id="modal-the-djinn" tabindex="-1" aria-labelledby="modal-the-djinn-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modal-the-djinn-title">The Djinn</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
-                    <p>Salimah heard the front door slam. Ibrahim had left their house for his early morning shift. Reluctantly, she got out of her bed, shivering slightly as the house was never quite warm enough. Omar and Farihah were still asleep, so she had time to wash and say her dawn prayers before dealing with the children. Drawing back the curtain, she saw that the streetlight was still emitting its sickly glow, while the rest of the street was plunged in darkness. Over the wrought iron fence she could see the churchyard, the gravestones looming masses against the grass.</p>
-                    <p>Further away in the distance, Canary Wharf flickered, its sparkling lights adding a incongruously glamorous backdrop to Salimah&rsquo;s immediate surroundings of Victorian terraces, each small front garden signalling the socio-economic background of its inhabitants with unerring accuracy: here, an aspirant box tree in a square metal container, there a defiant multicoloured display of geraniums. Salimah&rsquo;s home said little about her. Even the lightbulbs hung on their flexes with no shades to shield their glare, but the house itself was scrupulously tidy, every surface reflecting back the light like a mirror.</p>
-                    <p class="small-print mb-0"><em>The story continues in the book.</em></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-brass" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade story-modal"
+      id="modal-the-djinn"
+      tabindex="-1"
+      aria-labelledby="modal-the-djinn-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-the-djinn-title">The Djinn</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
+            <p>
+              Salimah heard the front door slam. Ibrahim had left their house
+              for his early morning shift. Reluctantly, she got out of her bed,
+              shivering slightly as the house was never quite warm enough. Omar
+              and Farihah were still asleep, so she had time to wash and say her
+              dawn prayers before dealing with the children. Drawing back the
+              curtain, she saw that the streetlight was still emitting its
+              sickly glow, while the rest of the street was plunged in darkness.
+              Over the wrought iron fence she could see the churchyard, the
+              gravestones looming masses against the grass.
+            </p>
+            <p>
+              Further away in the distance, Canary Wharf flickered, its
+              sparkling lights adding a incongruously glamorous backdrop to
+              Salimah&rsquo;s immediate surroundings of Victorian terraces, each
+              small front garden signalling the socio-economic background of its
+              inhabitants with unerring accuracy: here, an aspirant box tree in
+              a square metal container, there a defiant multicoloured display of
+              geraniums. Salimah&rsquo;s home said little about her. Even the
+              lightbulbs hung on their flexes with no shades to shield their
+              glare, but the house itself was scrupulously tidy, every surface
+              reflecting back the light like a mirror.
+            </p>
+            <p class="small-print mb-0">
+              <em>The story continues in the book.</em>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-brass" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal: The Gift -->
-    <div class="modal fade story-modal" id="modal-the-gift" tabindex="-1" aria-labelledby="modal-the-gift-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modal-the-gift-title">The Gift</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
-                    <p>I had to get a gift for my wife (who is easily disappointed) and I had to get it by 6pm on a cold and rainy Tuesday in London. She demands from me a certain quality in my gifts: they cannot be simply a proof of financial outlay (too crude, too straightforward) nor should they be clumsy, handcrafted love tokens (these are for children and young lovers) but they need to show an insight into her character, display a certain subtlety and a level of intellectual involvement.</p>
-                    <p>As you can imagine, this did not fit well into the timeframe of a business trip, but my stay had been unexpectedly lengthened due to cancellations (a weekend of storms with old fashioned British names such as &ldquo;Storm Archie&rdquo;) and I now had some time to solve the problem. Not the problem of my wife (if only such a solution existed) but the problem of her gift. I had one afternoon.</p>
-                    <p class="small-print mb-0"><em>The story continues in the book.</em></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-brass" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade story-modal"
+      id="modal-the-gift"
+      tabindex="-1"
+      aria-labelledby="modal-the-gift-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-the-gift-title">The Gift</h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
+            <p>
+              I had to get a gift for my wife (who is easily disappointed) and I
+              had to get it by 6pm on a cold and rainy Tuesday in London. She
+              demands from me a certain quality in my gifts: they cannot be
+              simply a proof of financial outlay (too crude, too
+              straightforward) nor should they be clumsy, handcrafted love
+              tokens (these are for children and young lovers) but they need to
+              show an insight into her character, display a certain subtlety and
+              a level of intellectual involvement.
+            </p>
+            <p>
+              As you can imagine, this did not fit well into the timeframe of a
+              business trip, but my stay had been unexpectedly lengthened due to
+              cancellations (a weekend of storms with old fashioned British
+              names such as &ldquo;Storm Archie&rdquo;) and I now had some time
+              to solve the problem. Not the problem of my wife (if only such a
+              solution existed) but the problem of her gift. I had one
+              afternoon.
+            </p>
+            <p class="small-print mb-0">
+              <em>The story continues in the book.</em>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-brass" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- ===== Footer (the same on every page) ===== -->
     <footer class="site-footer py-4">
-        <div class="container">
-            <div class="row gy-3">
-                <div class="col-md-4">
-                    <p class="mb-1">Wish Hounds Press</p>
-                    <p class="mb-0"><em>Stories to haunt you</em></p>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="index.html">Book</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact and trade</a></li>
-                        <li><a href="contact.html#privacy">Privacy</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <!-- TODO: replace each # with the real profile address, and delete any you do not use -->
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#" target="_blank" rel="noopener" aria-label="Wish Hounds Press on Instagram (opens in a new tab)">Instagram</a></li>
-                        <li><a href="#" target="_blank" rel="noopener" aria-label="Wish Hounds Press on Facebook (opens in a new tab)">Facebook</a></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="small-print mt-3 mb-0">&copy; 2026 Wish Hounds Press. All rights reserved.</p>
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-md-4">
+            <p class="mb-1">Wish Hounds Press</p>
+            <p class="mb-0"><em>Stories to haunt you</em></p>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled mb-0">
+              <li><a href="index.html">Book</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact and trade</a></li>
+              <li><a href="contact.html#privacy">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <!-- TODO: replace each # with the real profile address, and delete any you do not use -->
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Wish Hounds Press on Instagram (opens in a new tab)"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Wish Hounds Press on Facebook (opens in a new tab)"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+        <p class="small-print mt-3 mb-0">
+          &copy; 2026 Wish Hounds Press. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <!-- Bootstrap JavaScript: needed for the mobile menu and the story modals -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+    ></script>
     <!-- Stops a story's audio sample when its pop-up is closed -->
     <script src="assets/js/story-audio.js"></script>
-</body>
-
+  </body>
 </html>
