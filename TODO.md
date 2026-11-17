@@ -9,7 +9,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 - [ ] `index.html`: the "Coming soon" line about the next collection
 - [ ] `about.html`: why you started the imprint
 - [ ] `about.html`: check the legend paragraph and the author bio (both are drafts)
-- [ ] `trade.html`: trade details (ISBN, format, pages, price, publication date)
+- [x] `trade.html`: trade details (ISBN, format, pages, price, publication date)
 - [ ] `contact.html`: check the privacy wording matches what you actually do
 
 ## Links and services to connect
