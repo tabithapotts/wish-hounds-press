@@ -167,6 +167,7 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Gaps in the thorny stem: the repeated pattern showed gaps between each section, because the browser kept each tile's proportions when stretching it to fit. Fixed by adding preserveAspectRatio="none" to the SVG.
 - Half-thorns at the ends of the stem: the pattern was cut off part-way at each end. Fixed with mask-repeat: round, which stretches the tiles slightly so a whole number fits.
 - Masks blocked when opened from disk: browsers refuse to load a mask image from a separate file when the site is opened directly from the computer (file://). Fixed by writing the SVG into the CSS as a data URI.
+- About page logo squashed on tablets: between 768px and 991px the logo and the text sat side by side, but the logo column was only about 240px wide, so the logo's circular lettering ran into the heading. Fixed by moving the side-by-side layout from Bootstrap's md breakpoint (768px) to lg (992px), so on tablets the logo sits centred above the text.
 -->
 
 ## Credits and attribution
