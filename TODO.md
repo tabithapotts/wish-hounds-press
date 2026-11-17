@@ -1,6 +1,6 @@
 # Wish Hounds Press: what to edit next
 
-The three pages are built and working. Everything still to do is marked in the code with a `TODO` comment.
+The four pages are built and working. Everything still to do is marked in the code with a `TODO` comment.
 In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 ## Text in [square brackets] to replace
@@ -9,13 +9,13 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 - [ ] `index.html`: the "Coming soon" line about the next collection
 - [ ] `about.html`: why you started the imprint
 - [ ] `about.html`: check the legend paragraph and the author bio (both are drafts)
-- [ ] `contact.html`: trade details (ISBN, format, pages, price, publication date)
+- [ ] `trade.html`: trade details (ISBN, format, pages, price, publication date)
 - [ ] `contact.html`: check the privacy wording matches what you actually do
 
 ## Links and services to connect
 
 - [ ] `index.html`: the ebook and audiobook buttons still point to `#` (add Amazon UK links with `?tag=mrstabithapot-21`). The paperback button links to IngramSpark
-- [ ] Footer on all three pages: Instagram and Facebook links still point to `#`
+- [ ] Footer on all four pages: Instagram and Facebook links still point to `#`
 - [ ] `contact.html`: paste your Web3Forms access key in place of `YOUR-ACCESS-KEY-HERE`
 - [ ] `about.html`: paste your Mailchimp form address into the newsletter form's `action`
 

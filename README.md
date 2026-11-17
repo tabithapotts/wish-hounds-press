@@ -3,7 +3,7 @@
 **Live site:** [https://tabithapotts.github.io/wish-hounds-press/](https://tabithapotts.github.io/wish-hounds-press/)
 *(TODO: confirm this link once GitHub Pages is switched on, and note the wishhoundspress.com address if it is pointed at the site.)*
 
-Wish Hounds Press is a three-page website for an independent horror imprint, named after the ghostly hounds said to roam the Devon moors. It presents the imprint's first title, *A Book of Short Stories*, and points readers to the retailers where they can buy it.
+Wish Hounds Press is a four-page website for an independent horror imprint, named after the ghostly hounds said to roam the Devon moors. It presents the imprint's first title, *A Book of Short Stories*, and points readers to the retailers where they can buy it.
 
 ## Table of contents
 
@@ -34,8 +34,8 @@ It is built with HTML, CSS and Bootstrap for layout and responsiveness. The stru
 | Visitor | What they need | Where they find it |
 | :---- | :---- | :---- |
 | Readers | Learn about the book, sample each story, find where to buy it in print, ebook or audiobook | Book page |
-| Bookshops | Trade information and contact details | Contact and trade page |
-| Authors | Whether the imprint is open to submissions | Contact and trade page |
+| Bookshops | Trade information and contact details | Trade page, then Contact page |
+| Authors | Whether the imprint is open to submissions | Trade page |
 
 ## Features and user benefits
 
@@ -71,10 +71,21 @@ About page changes:
 - The imprint's story and the Devon legend behind its name, plus a short author bio.
 - A Mailchimp newsletter sign-up, so interested readers can hear about new titles.
 
-**Contact and trade page**
+**Trade page**
+
+- Trade information for bookshops (ISBN, format, pages, price and publication date), with a link to the contact form for trade terms.
+- A note that submissions are currently closed, so authors know not to send manuscripts.
+
+**Contact page**
 
 - A contact form using Web3Forms with an immediate on-screen confirmation, so the sender knows the message went through.
-- Trade information for bookshops, a note that submissions are currently closed, and a privacy note.
+- A privacy note explaining how visitors' details are used.
+
+<!-- DRAFT NOTE (17 November 2026): rewrite in your own words, then delete this comment.
+- The "Contact and trade" page was split into two pages, Trade and Contact, so each page has one clear job. Bookshops and authors go to Trade; anyone with a question goes to Contact. The navigation now reads Book, About, Trade, Contact on every page.
+- The Contact page is now a single centred column. The Trade page keeps the two-column layout, and the navbar still lines up with its right-hand column on large screens.
+-->
+
 
 ## Design
 
@@ -138,7 +149,8 @@ To run it locally, clone the repository and open `index.html` in a browser.
 | :---- | :---- | :---- |
 | Book page | to add | to add |
 | About | to add | to add |
-| Contact and trade | to add | to add |
+| Trade | to add | to add |
+| Contact | to add | to add |
 
 ## Bugs and errors
 

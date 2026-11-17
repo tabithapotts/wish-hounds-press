@@ -178,7 +178,7 @@ textarea:focus-visible {
 }
 
 /* Large screens: the nav spans the same width as the right-hand column
-   of the Contact page (col-lg-5), so "Book" lines up with the start of that
+   of the Trade page (col-lg-5), so "Book" lines up with the start of that
    column and the links spread out evenly across it.
    container-type lets cqw measure the container's width:
    100cqw is the full content width, and the column starts 7/12 of the way
