@@ -122,7 +122,11 @@ textarea:focus-visible {
 */
 .divider {
     height: 20px;
-    max-width: 30rem;
+    /* Two-thirds of the page width on wide screens, but never shorter
+       than 30rem, and never wider than the screen on phones.
+       Read from the inside out: max() picks the larger of 30rem and 2/3,
+       then min() stops that going past 100%. */
+    width: min(100%, max(30rem, 66.667%));
     margin: 0 auto;
     background-color: var(--near-black);
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='20' viewBox='0 0 64 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10C21 8 43 12 64 10' fill='none' stroke='black' stroke-width='3'/%3E%3Cpath d='M11 9.8Q19 7.8 26 0.8Q21 7.4 22.5 9.3Z'/%3E%3Cpath d='M41 10.7Q49 12.6 56 19.2Q51 12.7 52.5 10.7Z'/%3E%3C/svg%3E");
