@@ -6,7 +6,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 ## Text in [square brackets] to replace
 
 - [ ] `index.html`: the book blurb in the hero
-- [ ] `index.html`: the "Coming soon" line about the next collection
+- [x] `index.html`: the "Coming soon" line about the next collection
 - [ ] `about.html`: why you started the imprint
 - [ ] `about.html`: check the legend paragraph and the author bio (both are drafts)
 - [x] `trade.html`: trade details (ISBN, format, pages, price, publication date)
