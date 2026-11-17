@@ -253,6 +253,14 @@ textarea:focus-visible {
     color: var(--near-black);
 }
 
+/* The three buy buttons beside the cover.
+   A flex column stretches its children by default, so all three buttons
+   take the width of the column and match each other. min-width gives the
+   short labels some presence. */
+.buy-buttons {
+    min-width: 9rem;
+}
+
 /* 6. Hero (top of the Book page)
    -------------------------------------------------------------------------- */
 /* The video is portrait (9:16), like a phone screen.
