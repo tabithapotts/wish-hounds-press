@@ -306,7 +306,7 @@ textarea:focus-visible {
     }
 }
 
-/* Reviews (in the hero and the Reviews section).
+/* Reviews (the slides in the hero reviews slider).
    Bootstrap's blockquote classes set the size; these lines add the old-book look:
    a brass rule down the left, italic quote text and a near-black source line. */
 .review {
@@ -338,6 +338,123 @@ textarea:focus-visible {
 .review .blockquote-footer {
     color: var(--near-black);
     margin-bottom: 0;
+}
+
+/* Reviews slider: the old-book look.
+   A double brass rule above and below the whole slider (like a printed title page),
+   so the single rules on each review are switched off inside it. */
+.review-carousel {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0 0.5rem;
+    border-top: 3px double var(--deep-brass);
+    border-bottom: 3px double var(--deep-brass);
+}
+
+.review-carousel .review,
+.text-center .review-carousel .review {
+    margin: 0;
+    width: 100%;
+    padding: 0 2.75rem; /* room for the arrows, so they never sit on the text */
+    border: none;
+}
+
+/* A fixed minimum height, with the quote centred inside it,
+   stops the page jumping when a longer or shorter quote fades in. */
+.review-carousel .carousel-item {
+    min-height: 18rem; /* phones: the longest quote wraps onto more lines */
+}
+
+@media (min-width: 576px) {
+    .review-carousel .carousel-item {
+        min-height: 12rem;
+    }
+}
+
+.review-carousel .carousel-item.active,
+.review-carousel .carousel-item-next,
+.review-carousel .carousel-item-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* A large brass opening quotation mark in the heading font, like a drop cap.
+   The second content line ("/ empty") tells screen readers not to read it out;
+   older browsers ignore that line and use the first. */
+.review-carousel .blockquote::before {
+    display: block;
+    content: "\201C";
+    content: "\201C" / "";
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 0.8;
+    color: var(--brass);
+}
+
+/* Small capitals for the source line, as in old printed books.
+   Bootstrap puts a dash before every blockquote-footer; content: none removes it. */
+.review-carousel .blockquote-footer {
+    font-variant: small-caps;
+    letter-spacing: 0.03em;
+    margin-top: 0.5rem;
+}
+
+.review-carousel .blockquote-footer::before {
+    content: none;
+}
+
+/* Narrow arrows in deep brass. Bootstrap's arrows are white SVG pictures set as
+   background images, so we swap in the same arrow shapes filled with deep brass (%237A5C2E
+   is #7A5C2E written for a URL). Full opacity keeps them clear enough to see (WCAG 1.4.11). */
+.review-carousel .carousel-control-prev,
+.review-carousel .carousel-control-next {
+    width: 2.5rem;
+    opacity: 0.85;
+}
+
+.review-carousel .carousel-control-prev:hover,
+.review-carousel .carousel-control-next:hover,
+.review-carousel .carousel-control-prev:focus,
+.review-carousel .carousel-control-next:focus {
+    opacity: 1;
+}
+
+.review-carousel .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237A5C2E'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/%3e%3c/svg%3e");
+}
+
+.review-carousel .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237A5C2E'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
+}
+
+.review-carousel .carousel-control-prev-icon,
+.review-carousel .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Dots: moved below the quote (Bootstrap places them on top of the slide)
+   and turned into small brass diamonds. */
+.review-carousel .carousel-indicators {
+    position: static;
+    margin: 0.75rem 0 0;
+    gap: 0.75rem;
+}
+
+.review-carousel .carousel-indicators [data-bs-target] {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0;
+    border: 1px solid var(--deep-brass);
+    background-color: transparent;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+
+.review-carousel .carousel-indicators .active {
+    background-color: var(--deep-brass);
 }
 
 /* 7. Story cards

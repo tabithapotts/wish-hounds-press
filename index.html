@@ -97,19 +97,6 @@
                 folklore, myth and local history and her interest in how women
                 survive in a patriarchal society.
               </p>
-              <!-- Review: <figure> groups the quote with its source. blockquote and blockquote-footer are Bootstrap classes. -->
-              <figure class="review">
-                <blockquote class="blockquote">
-                  <p>
-                    Tabitha Potts’ <em>Crow Girl</em> is wonderfully eldritch
-                    and twisted ... Potts’ character building is quite
-                    spellbinding…
-                  </p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                  William J Brown in <cite>Horrified Magazine</cite>
-                </figcaption>
-              </figure>
               <p>
                 Sample every story below, then choose how you would like to read
                 or listen.
@@ -163,6 +150,87 @@
                 As an Amazon Associate, Wish Hounds Press earns from qualifying
                 purchases.
               </p>
+
+              <!-- Reviews slider (Bootstrap carousel).
+                   carousel-fade cross-fades instead of sliding. There is no data-bs-ride,
+                   so it never moves on its own: visitors change slides with the arrows or dots
+                   (WCAG 2.2.2, nothing moves without the visitor choosing it).
+                   aria-roledescription tells screen readers this is a carousel made of slides. -->
+              <div
+                id="reviews-carousel"
+                class="carousel slide carousel-fade review-carousel mt-4"
+                aria-roledescription="carousel"
+                aria-label="Reviews of Crow Girl"
+              >
+                <div class="carousel-inner">
+                  <!-- Slide 1: Horrified Magazine. "active" marks the slide shown first; only one slide has it. -->
+                  <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                    <figure class="review">
+                      <blockquote class="blockquote">
+                        <p>
+                          Tabitha Potts’ <em>Crow Girl</em> is wonderfully eldritch
+                          and twisted … Potts’ character building is quite
+                          spellbinding.
+                        </p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer">
+                        William J Brown in <cite>Horrified Magazine</cite>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <!-- Slide 2: British Fantasy Society -->
+                  <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                    <figure class="review">
+                      <blockquote class="blockquote">
+                        <p>
+                          Tabitha Potts’ work is also outstanding … Told like a
+                          traditional fairy tale but using language in sparse,
+                          poetic and powerful ways.
+                        </p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer">
+                        I. Rosenfeld for the <cite>British Fantasy Society</cite>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <!-- Slide 3: strange.scholar on Instagram -->
+                  <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                    <figure class="review">
+                      <blockquote class="blockquote">
+                        <p>
+                          There is a brightness present in this story amongst its
+                          horror … This is a story to remember.
+                        </p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer">
+                        <a href="https://www.instagram.com/strange.scholar">strange.scholar</a>
+                        on Instagram, reviewing <em>Crow Girl</em>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <!-- Previous and next arrows. data-bs-target names the carousel's id;
+                     the visually-hidden text gives screen readers a label for each button. -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviews-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous review</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviews-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next review</span>
+                </button>
+
+                <!-- Dots, one per slide. Bootstrap counts slides from 0, so slide 3 is data-bs-slide-to="2".
+                     They sit below the quote (see styles.css) so they never cover the text. -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
+                  <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="1" aria-label="Review 2"></button>
+                  <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="2" aria-label="Review 3"></button>
+                </div>
+              </div>
             </div>
 
             <div class="col-lg-6">
@@ -408,34 +476,6 @@
                   </button>
                 </div>
               </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Reviews ===== -->
-      <section class="section pt-0" aria-labelledby="reviews-title">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-              <h2 id="reviews-title">Reviews</h2>
-              <figure class="review">
-                <blockquote class="blockquote">
-                  <p>
-                    Tabitha Potts’ work is also outstanding...
-                    <em>Crow Girl</em>, also caught my eye. Told like a
-                    traditional fairy tale but using language in sparse, poetic
-                    and powerful ways, she follows the life of an abandoned
-                    child who is protected more effectively by animals rather
-                    than human society. Expelled from her village, she learns to
-                    assert a power that bridges human society with the natural
-                    world and ultimately acts as a healing force.
-                  </p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                  I. Rosenfeld for the <cite>British Fantasy Society</cite>
-                </figcaption>
-              </figure>
             </div>
           </div>
         </div>
