@@ -16,7 +16,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 - [x] `index.html`: ebook and audiobook buttons link to Amazon UK with `?tag=mrstabithapot-21`. The paperback button links to IngramSpark
 - [ ] Footer on all four pages: Instagram and Facebook links still point to `#`
-- [ ] `contact.html`: paste your Web3Forms access key in place of `YOUR-ACCESS-KEY-HERE`
+- [ ] `contact.html`: localhost Web3Forms key added for testing. Swap in the live site key before launch, then send a test message
 - [ ] `about.html`: paste your Mailchimp form address into the newsletter form's `action`
 
 ## Files to add
