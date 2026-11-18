@@ -5,16 +5,16 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 ## Text in [square brackets] to replace
 
-- [ ] `index.html`: the book blurb in the hero
+- [x] `index.html`: the book blurb in the hero
 - [x] `index.html`: the "Coming soon" line about the next collection
-- [ ] `about.html`: why you started the imprint
+- [x] `about.html`: why you started the imprint
 - [ ] `about.html`: check the legend paragraph and the author bio (both are drafts)
 - [x] `trade.html`: trade details (ISBN, format, pages, price, publication date)
 - [ ] `contact.html`: check the privacy wording matches what you actually do
 
 ## Links and services to connect
 
-- [ ] `index.html`: the ebook and audiobook buttons still point to `#` (add Amazon UK links with `?tag=mrstabithapot-21`). The paperback button links to IngramSpark
+- [x] `index.html`: ebook and audiobook buttons link to Amazon UK with `?tag=mrstabithapot-21`. The paperback button links to IngramSpark
 - [ ] Footer on all four pages: Instagram and Facebook links still point to `#`
 - [ ] `contact.html`: paste your Web3Forms access key in place of `YOUR-ACCESS-KEY-HERE`
 - [ ] `about.html`: paste your Mailchimp form address into the newsletter form's `action`
@@ -22,7 +22,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 ## Files to add
 
 - [ ] Decide whether to use the Amazon mobile video too (it is in the `wish-hounds-press-video-originals` folder, outside the site)
-- [ ] The corrected logo ("Wish Hounds Press"), saved over `assets/images/wish-hounds-press-logo.webp`
+- [x] The corrected logo ("Wish Hounds Press"), now `assets/images/whp-logo-new.webp`
 
 ## Audio samples
 
@@ -38,7 +38,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 ## Before you submit
 
-- [ ] Delete the old files `assets/images/Wish hound press.png` and `assets/images/crowgirlsite.jpeg` once you are happy with the WebP versions
+- [x] Delete the old, unused image and video files
 - [ ] Validate the HTML (validator.w3.org) and CSS (jigsaw.w3.org/css-validator)
 - [ ] Run Lighthouse in Chrome DevTools
 - [ ] Finish the README: screenshots, testing results, credits and the AI declaration in your own words
