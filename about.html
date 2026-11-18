@@ -115,10 +115,14 @@
 
       <div class="divider" aria-hidden="true"></div>
 
-      <section class="section" aria-labelledby="legend-title">
+      <!-- The legend and the author bio sit side by side from 992px (lg), and stack on
+           smaller screens. Each column is its own <section> with its own heading,
+           so screen readers still list them as two parts of the page.
+           gx-lg-5 widens the gap between the columns; gy-5 spaces them when stacked. -->
+      <div class="section">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
+          <div class="row gy-5 gx-lg-5">
+            <section class="col-lg-6" aria-labelledby="legend-title">
               <h2 id="legend-title">The legend of the wish hounds</h2>
               <!-- TODO: draft copy from general folklore. Check it and rewrite in your own voice. -->
               <p>
@@ -130,15 +134,9 @@
               <p>
                 To hear them is an ill omen.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
-      <section class="section pt-0" aria-labelledby="author-title">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <section class="col-lg-6" aria-labelledby="author-title">
               <h2 id="author-title">About the author</h2>
               <!-- TODO: draft bio. Check every detail, and add an author photo if you would like one. -->
               <p>
@@ -162,10 +160,10 @@
                 short and flash fiction, and an anthology of writing from the
                 Story Radio podcast.
               </p>
-            </div>
+            </section>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- ===== Newsletter (Mailchimp) ===== -->
       <section

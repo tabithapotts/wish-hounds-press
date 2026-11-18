@@ -603,6 +603,23 @@
             ></button>
           </div>
           <div class="modal-body">
+            <!-- Audio sample (50 seconds): the author reading the opening below, which also serves as its transcript.
+                         Counts towards the 8-minute Audible Exclusive excerpt allowance (see the Crow Girl note above).
+                         preload="none" means the audio only downloads when the visitor presses play.
+                         assets/js/story-audio.js stops it when the pop-up closes. -->
+            <figure class="story-audio">
+              <figcaption>Listen to the opening, read by the author</figcaption>
+              <audio
+                controls
+                preload="none"
+                src="assets/audio/the-edge-clip.mp3"
+              >
+                Your browser does not support audio.
+                <a href="assets/audio/the-edge-clip.mp3"
+                  >Download The Edge sample</a
+                >.
+              </audio>
+            </figure>
             <!-- The opening of the story, one <p> per paragraph. The first letter becomes a drop cap automatically. -->
             <p>
               There&rsquo;s not much to do in the caravan park, and Mum says me
