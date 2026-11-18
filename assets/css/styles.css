@@ -341,15 +341,14 @@ textarea:focus-visible {
 }
 
 /* Reviews slider: the old-book look.
-   A double brass rule above and below the whole slider (like a printed title page),
-   so the single rules on each review are switched off inside it. */
+   No rules above or below: the quote marks frame each review, and the thorn
+   divider below the hero already separates it from the next section.
+   The single rules on each review are switched off inside the slider. */
 .review-carousel {
     max-width: 34rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem 0 0.5rem;
-    border-top: 3px double var(--deep-brass);
-    border-bottom: 3px double var(--deep-brass);
+    padding: 1rem 0 1.5rem;
 }
 
 .review-carousel .review,
@@ -363,12 +362,12 @@ textarea:focus-visible {
 /* A fixed minimum height, with the quote centred inside it,
    stops the page jumping when a longer or shorter quote fades in. */
 .review-carousel .carousel-item {
-    min-height: 18rem; /* phones: the longest quote wraps onto more lines */
+    min-height: 21rem; /* phones: the longest quote wraps onto more lines */
 }
 
 @media (min-width: 576px) {
     .review-carousel .carousel-item {
-        min-height: 12rem;
+        min-height: 15rem;
     }
 }
 
@@ -380,17 +379,38 @@ textarea:focus-visible {
     justify-content: center;
 }
 
-/* A large brass opening quotation mark in the heading font, like a drop cap.
-   The second content line ("/ empty") tells screen readers not to read it out;
+/* Large brass quotation marks in the heading font: an opening mark in the
+   top-left corner and a closing mark in the bottom-right corner, framing the quote.
+   The padding makes room for them above and below the text.
+   The second content line ("/ empty") tells screen readers not to read them out;
    older browsers ignore that line and use the first. */
-.review-carousel .blockquote::before {
-    display: block;
-    content: "\201C";
-    content: "\201C" / "";
+.review-carousel .blockquote {
+    position: relative;
+    padding: 1.75rem 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-carousel .blockquote::before,
+.review-carousel .blockquote::after {
+    position: absolute;
     font-family: var(--font-heading);
     font-size: 3.5rem;
-    line-height: 0.8;
+    line-height: 1;
     color: var(--brass);
+}
+
+.review-carousel .blockquote::before {
+    content: "\201C";
+    content: "\201C" / "";
+    top: -0.25rem;
+    left: 0;
+}
+
+.review-carousel .blockquote::after {
+    content: "\201D";
+    content: "\201D" / "";
+    bottom: -1.6rem;
+    right: 0;
 }
 
 /* Small capitals for the source line, as in old printed books.
@@ -436,25 +456,53 @@ textarea:focus-visible {
 }
 
 /* Dots: moved below the quote (Bootstrap places them on top of the slide)
-   and turned into small brass diamonds. */
+   and turned into crow feathers: an outline feather for each review,
+   and a solid one for the review on show.
+   The feather is an SVG used as a mask on ::before, so the colour comes from
+   background-color (deep brass, clear enough to see: WCAG 1.4.11). The mask sits
+   on ::before rather than the button so it never clips the keyboard focus outline.
+   Each button is 24px square, big enough to tap (WCAG 2.5.8). */
 .review-carousel .carousel-indicators {
     position: static;
     margin: 0.75rem 0 0;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .review-carousel .carousel-indicators [data-bs-target] {
-    width: 0.6rem;
-    height: 0.6rem;
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
     margin: 0;
-    border: 1px solid var(--deep-brass);
+    border: 0;
     background-color: transparent;
-    transform: rotate(45deg);
     opacity: 1;
+    transition: transform 0.2s ease;
 }
 
-.review-carousel .carousel-indicators .active {
+.review-carousel .carousel-indicators [data-bs-target]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-color: var(--deep-brass);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.4 2C16 5 16.8 9 15.6 11L13.6 11.6L15.4 12.6C14.8 15.5 13.8 17.6 12.4 19Z'/%3E%3Cpath d='M11.6 2.5C8.4 5.5 7.8 8.5 8.4 10L10.4 10.4L8.6 11.8C9 14.5 10.2 17 11.6 19Z'/%3E%3Cpath d='M12 19V23'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.4 2C16 5 16.8 9 15.6 11L13.6 11.6L15.4 12.6C14.8 15.5 13.8 17.6 12.4 19Z'/%3E%3Cpath d='M11.6 2.5C8.4 5.5 7.8 8.5 8.4 10L10.4 10.4L8.6 11.8C9 14.5 10.2 17 11.6 19Z'/%3E%3Cpath d='M12 19V23'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* The review on show: the same feather, filled in */
+.review-carousel .carousel-indicators .active::before {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.5 1.8C16.4 5 17.2 9 15.9 11.2L13.9 11.7L15.7 12.8C15 15.7 14 17.8 12.5 19.4Z'/%3E%3Cpath d='M11.5 2.2C8 5.4 7.4 8.5 8.1 10.1L10.1 10.5L8.3 11.9C8.7 14.7 10 17.2 11.5 19.4Z'/%3E%3Cpath d='M12 18.5V23' stroke='black' stroke-width='1.2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.5 1.8C16.4 5 17.2 9 15.9 11.2L13.9 11.7L15.7 12.8C15 15.7 14 17.8 12.5 19.4Z'/%3E%3Cpath d='M11.5 2.2C8 5.4 7.4 8.5 8.1 10.1L10.1 10.5L8.3 11.9C8.7 14.7 10 17.2 11.5 19.4Z'/%3E%3Cpath d='M12 18.5V23' stroke='black' stroke-width='1.2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* A little flutter when you point at a feather */
+.review-carousel .carousel-indicators [data-bs-target]:hover {
+    transform: rotate(-12deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .review-carousel .carousel-indicators [data-bs-target] {
+        transition: none;
+    }
 }
 
 /* 7. Story cards
