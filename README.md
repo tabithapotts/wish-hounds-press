@@ -226,7 +226,7 @@ I used Claude, in the Claude desktop app, and Claude Code, in VS Code. I used th
 - Built the first version of the pages and the stylesheet from my brief, wireframes and colour palette.
 - Converted the logo and story title plates to WebP, and copied the opening of each story from the print PDF into the pop-ups.
 - Drafted the first versions of the legend paragraph, the author bio and the privacy note, which I then checked.
-- Cut the audio samples from my audiobook and wrote the audio player code. Edited the original trailer, and later built the new trailer from my photographs.
+- Wrote the audio player code. Edited the original trailer, and later built the new trailer from my photographs.
 - Found and fixed HTML validator errors, and ran Lighthouse and validation checks.
 - Replaced the contact form script with a version that needs no JavaScript, at my teacher's request.
 - Created the planning issues on my GitHub project board, and wrote commit messages.
@@ -235,7 +235,7 @@ I used Claude, in the Claude desktop app, and Claude Code, in VS Code. I used th
 
 - Wrote the brief and planned the site: its audiences, pages, colours and wireframes.
 - Wrote the blurb, story descriptions and awards, and chose the reviews.
-- Narrated the audiobook and the trailer, and chose where each audio sample should end.
+- Narrated the audiobook and the trailer, and cut the audio samples from my audiobook myself in Descript.
 - Chose the house style: curly quotes, italic titles and "Potts'".
 - Made the design decisions in the Layout decisions section above, including the text panels after my teacher's feedback, the printer's flower divider, the simpler navigation and a reviews slider that doesn't move on its own.
 - Split trade and contact information into two pages because one page looked too busy, and chose a portrait frame for the trailer.
