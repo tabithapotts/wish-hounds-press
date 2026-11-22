@@ -29,7 +29,9 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 - [x] Crow Girl sample (`assets/audio/crow-girl-sample.m4a`, 1:32) ends after "...from a single feather or an egg."
 - [x] The Edge sample (`assets/audio/the-edge-clip.mp3`, 0:50)
-- [ ] Audible Exclusive allows 8 minutes of excerpts in total. Crow Girl (1:32) and The Edge (0:50) use 2:22, leaving about 5:38 for the other four stories (up to about 1:20 each)
+- [x] Hagstone (1:03), The Bells of London Town (1:00), The Djinn (1:33) and The Gift (1:07) samples added
+- [x] All six samples total 7:05, under the 8-minute Audible Exclusive excerpt allowance
+- [ ] Check by ear that each clip matches its written excerpt (the excerpt is the transcript)
 - [ ] Full chapters are kept in `wish-hounds-press-audio-originals`, outside the site. Never put a full chapter in `assets/audio/`
 
 ## Decisions still open

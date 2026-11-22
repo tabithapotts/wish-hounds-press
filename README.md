@@ -59,7 +59,7 @@ Book page changes:
 - The hero is kept short (blurb, one review and the buy buttons) so the buy buttons are visible without scrolling on a laptop.
 - An "About the stories" section above the cards introduces the themes and each story.
 - A "Reviews" section below the cards. Reviews use figure, blockquote and figcaption, with Bootstrap's blockquote classes.
-- Audio sample: the Crow Girl pop-up has a 1 minute 32 second sample of the author reading the opening, using the browser's built-in audio player. The written excerpt below it acts as a transcript, for accessibility. A short script (assets/js/story-audio.js) stops the audio when the pop-up closes.
+- Audio samples: every story pop-up has a short sample (50 seconds to 1 minute 33 seconds, 7 minutes 5 seconds in total) of the author reading the opening, using the browser's built-in audio player. The written excerpt below it acts as a transcript, for accessibility. A short script (assets/js/story-audio.js) stops the audio when the pop-up closes.
 
 About page changes:
 - The author bio now includes the author's awards and shortlistings.
@@ -185,7 +185,7 @@ To run it locally, clone the repository and open `index.html` in a browser.
 <!-- DRAFT NOTES (16 November 2026): check, rewrite in your own words, then delete this comment.
 
 - Book trailer: remade from the author's own crow photographs, set in EB Garamond, with the author's narration; built by Claude at the author's request.
-- Crow Girl audio sample: read by the author, taken from the audiobook of A Book of Short Stories (Audible). Used under the ACX terms for Audible Exclusive titles, which allow verbatim excerpts of up to 10% of the audiobook's length on the rights holder's own website to promote it.
+- Audio samples: read by the author, taken from the audiobook of A Book of Short Stories (Audible). Used under the ACX terms for Audible Exclusive titles, which allow verbatim excerpts of up to 10% of the audiobook's length on the rights holder's own website to promote it.
 - Reviews: William J Brown in Horrified Magazine, and I. Rosenfeld for the British Fantasy Society. Consider adding links to the original reviews.
 -->
 
