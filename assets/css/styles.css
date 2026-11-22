@@ -111,30 +111,30 @@ textarea:focus-visible {
 
 /* 3. Ornamental divider
    --------------------------------------------------------------------------
-   A thorny stem in the style of the cover's vines.
-   A small SVG tile (a gently curving stem with one thorn above and one below)
-   repeats along the line. It is used as a mask, so the colour comes from
-   background-color and stays tied to the palette variables.
-   The SVG is written into the CSS (a data URI) because browsers block masks
-   loaded from separate files when the site is opened straight from disk.
-   (A leaf cut from the cover is saved as assets/images/divider-leaf.webp
-   for possible use elsewhere.)
+   A plain rule with a printer's flower (the character ❧) in the middle.
+   display: flex lines up three things in a row: a line, the flower, a line.
+   ::before and ::after add an empty box on each side of the flower;
+   flex: 1 makes each box stretch to fill the space, and border-top draws the line.
 */
 .divider {
-    height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--near-black);
+    font-size: 1.5rem; /* makes the flower larger */
     /* Two-thirds of the page width on wide screens, but never shorter
        than 30rem, and never wider than the screen on phones.
        Read from the inside out: max() picks the larger of 30rem and 2/3,
        then min() stops that going past 100%. */
     width: min(100%, max(30rem, 66.667%));
     margin: 0 auto;
-    background-color: var(--near-black);
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='20' viewBox='0 0 64 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10C21 8 43 12 64 10' fill='none' stroke='black' stroke-width='3'/%3E%3Cpath d='M11 9.8Q19 7.8 26 0.8Q21 7.4 22.5 9.3Z'/%3E%3Cpath d='M41 10.7Q49 12.6 56 19.2Q51 12.7 52.5 10.7Z'/%3E%3C/svg%3E");
-    /* "round" stretches the tiles slightly so a whole number fits,
-       which avoids half-thorns at the ends */
-    mask-repeat: round no-repeat;
-    mask-size: 64px 20px;
-    mask-position: center;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--near-black);
 }
 
 /* 4. Navbar

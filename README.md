@@ -113,7 +113,7 @@ Layout and decoration decisions:
 - Centred reviews: the brass rule down the left side looked lopsided on centred text, so centred reviews have short brass rules above and below the quote instead.
 - Story cards: more space between the cards (1.5rem instead of 1rem) and at the screen edges on tablets and larger (3rem instead of 1.5rem), so the grid feels less crowded.
 - Navigation: on large screens the nav links spread across the same width as the right-hand column of the Contact page, so "Book" lines up with the start of that column. On tablets the links have a little more space between them; on phones the collapsed menu is unchanged.
-- Thorny stem divider: the plain line between sections is now a thorny stem, drawn to match the vines on the cover. It is a small SVG pattern repeated along the line as a CSS mask, so its colour comes from the near-black palette variable.
+- Divider: a plain line with a printer's flower (❧) in the middle, made with CSS flexbox and ::before and ::after. A thorny stem drawn as an SVG mask was tried, but I went back to the printer's flower because it is simpler and I can explain every line of it.
 - Cover leaf: a leaf cut from the cover artwork (assets/images/divider-leaf.webp) was tried in the middle of the divider. The divider looked better as the stem alone, so the leaf is kept for use elsewhere.
 -->
 
@@ -164,8 +164,8 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Audio kept playing after a pop-up was closed. Fixed with assets/js/story-audio.js, which pauses the audio when Bootstrap closes the pop-up.
 - Video shape: a landscape (16:9) frame would have cropped the portrait trailer to a narrow strip. Fixed by changing the frame to 9:16 with a maximum height.
 - Video file size: the original trailer was 14.6 MB. Resizing it to 720 x 1280 brought it down to about 5 MB, which helps the Lighthouse performance score.
-- Gaps in the thorny stem: the repeated pattern showed gaps between each section, because the browser kept each tile's proportions when stretching it to fit. Fixed by adding preserveAspectRatio="none" to the SVG.
-- Half-thorns at the ends of the stem: the pattern was cut off part-way at each end. Fixed with mask-repeat: round, which stretches the tiles slightly so a whole number fits.
+- Gaps in the thorny stem (fixed before the stem was replaced by the printer's flower): the repeated pattern showed gaps between each section, because the browser kept each tile's proportions when stretching it to fit. Fixed by adding preserveAspectRatio="none" to the SVG.
+- Half-thorns at the ends of the stem (also before it was replaced): the pattern was cut off part-way at each end. Fixed with mask-repeat: round, which stretches the tiles slightly so a whole number fits.
 - Masks blocked when opened from disk: browsers refuse to load a mask image from a separate file when the site is opened directly from the computer (file://). Fixed by writing the SVG into the CSS as a data URI.
 - About page logo squashed on tablets: between 768px and 991px the logo and the text sat side by side, but the logo column was only about 240px wide, so the logo's circular lettering ran into the heading. Fixed by moving the side-by-side layout from Bootstrap's md breakpoint (768px) to lg (992px), so on tablets the logo sits centred above the text.
 -->
