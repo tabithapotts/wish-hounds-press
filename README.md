@@ -2,7 +2,9 @@
 
 **Live site:** [https://tabithapotts.github.io/wish-hounds-press/](https://tabithapotts.github.io/wish-hounds-press/)
 
-Wish Hounds Press is a four-page website (plus a thank-you page for the contact form) for an independent horror imprint, named after the ghostly hounds said to roam the Devon moors. It presents the imprint's first title, *A Book of Short Stories*, and points readers to the retailers where they can buy it.
+Wish Hounds Press is the website for a small publishing imprint run by an author. It publishes dark literary short fiction and is named after the Wish, or Wisht, Hounds of Devon: a pack of spectral hounds that kept their kennel in Wistman's Wood and hunted lone travellers and the spirits of unbaptised children.
+
+The site has four pages, plus a thank-you page for the contact form. It presents the imprint's first title, *A Book of Short Stories*, and points readers to the retailers where they can buy it.
 
 ## Table of contents
 
@@ -26,7 +28,7 @@ The site has three aims:
 - to build a mailing list through a newsletter sign-up;
 - to present the imprint to bookshops and to authors who may want to submit.
 
-It is built with HTML, CSS and Bootstrap for layout and responsiveness. The structure allows further titles to be added later, starting with a second short story collection.
+It is built with HTML, CSS and Bootstrap for layout and responsiveness. The structure allows new titles to be added later, starting with the two books planned for 2027: an anthology of short stories by Story Radio authors and a collection of Tabitha Potts' prize-winning stories.
 
 ## Who it is for
 
@@ -35,60 +37,58 @@ It is built with HTML, CSS and Bootstrap for layout and responsiveness. The stru
 | Readers | Learn about the book, sample each story, find where to buy it in print, ebook or audiobook | Book page |
 | Bookshops | Trade information and contact details | Trade page, then Contact page |
 | Authors | Whether the imprint is open to submissions | Trade page |
+| Reviewers | Information about the book and a way to ask for a review copy | Book page, then Trade or Contact page |
 
 ## Features and user benefits
 
-*(TODO: update this list to match what is actually built before submission.)*
-
 **Site-wide**
 
-- A consistent navigation bar and footer with social links, so visitors can move between pages easily from anywhere.
+- A consistent navigation bar and footer on every page, so visitors can move between pages easily from anywhere.
 - Semantic HTML, alt text on meaningful images and lazy-loaded images, for accessibility and faster loading.
+- A "Join the newsletter" link in the footer of every page, so visitors can sign up from anywhere on the site.
 
 **Book page**
 
-- A hero section with the imprint logo, cover, blurb and buy buttons for print, ebook and audiobook, with an affiliate link disclosure. Readers can go straight to a retailer.
-- One card per story, showing that story's title plate from the book. A "Read a sample" button opens a Bootstrap modal with the opening of the story, so readers can sample each one without leaving the page.
-- A "coming soon" card previewing the next collection.
-- A featured *Crow Girl* video with controls, a poster image and captions, so the reader decides when to play it.
-
-<!-- DRAFT NOTES (16 November 2026): rewrite in your own words, update the bullets above to match, then delete this comment.
-
-Book page changes:
-- The hero shows the Crow Girl trailer in a portrait (9:16) frame, like a phone screen. It fills the width on a phone and is never taller than 80% of the screen on a laptop. The author's narration matches the text shown on screen, so it needs no separate captions. A still from the video is the poster, and preload="none" means it only downloads when the visitor presses play.
-- The hero is kept short (blurb, one review and the buy buttons) so the buy buttons are visible without scrolling on a laptop.
-- An "About the stories" section above the cards introduces the themes and each story.
-- A "Reviews" section below the cards. Reviews use figure, blockquote and figcaption, with Bootstrap's blockquote classes.
-- Audio samples: every story pop-up has a short sample (50 seconds to 1 minute 33 seconds, 7 minutes 5 seconds in total) of the author reading the opening, using the browser's built-in audio player. The written excerpt below it acts as a transcript, for accessibility. A short script (assets/js/story-audio.js) stops the audio when the pop-up closes.
-
-About page changes:
-- The author bio now includes the author's awards and shortlistings.
--->
+- **Hero section:** the most important part of the page for readers. It has the imprint logo, the blurb, the cover and buy buttons for the paperback, ebook and audiobook, with an affiliate link disclosure, so readers can go straight to a retailer.
+- **Reviews slider:** three reviews that change only when the visitor clicks the arrows or dots, so nothing moves on its own.
+- **Crow Girl trailer:** a portrait video with my narration and the words shown on screen, and a poster image. It only downloads when the visitor presses play. With the sample pop-ups, it gives a really good feel for the book and the audiobook.
+- **Story samples:** one card for each of the six stories, showing its title plate from the book. "Read a sample" opens a Bootstrap modal pop-up with the opening of the story and an audio clip of me reading it, so readers can sample the book and the audiobook without leaving the page. The written excerpt also acts as a transcript of the audio. I think the samples and the trailer are the best features of the site.
+- **"About the stories":** an introduction to the themes of the collection, above the cards.
+- **"Coming soon":** a panel about the two books planned for 2027, with a link to the newsletter.
 
 **About page**
 
-- The imprint's story and the Devon legend behind its name, plus a short author bio.
-- A newsletter sign-up, so interested readers can hear about new titles. It uses Web3Forms with no JavaScript, like the contact form: each signup arrives by email and is added to the mailing list by hand.
+- Visitors can find out more about me and the imprint, and get a sense of the kind of fiction I publish.
+- **The imprint's story:** why I started Wish Hounds Press.
+- **The Devon legend:** the story of the Wish Hounds behind the name, with a link to read more about them.
+- **Author bio:** a short biography, including my awards and shortlistings.
+- **Newsletter sign-up:** readers can sign up to hear about new titles. It uses Web3Forms with no JavaScript, like the contact form: each sign-up arrives by email and I add it to the mailing list by hand.
 
 **Trade page**
 
-- Trade information for bookshops (ISBN, format, pages, price and publication date), with a link to the contact form for trade terms.
+- Trade information for bookshops and libraries: ISBN, format, pages, price and publication date, with a link to the contact form for trade terms and review copies.
 - A note that submissions are currently closed, so authors know not to send manuscripts.
 
 **Contact page**
 
-- A contact form using Web3Forms, with no JavaScript. The browser checks the required fields and the email address before sending, and after sending the visitor is taken to a thank-you page (`thank-you.html`), so they know the message went through.
+- A contact form using Web3Forms, with no JavaScript. The browser checks the required fields and the email address before sending, and afterwards the visitor is taken to a thank-you page, so they know the message went through.
+- A dropdown asking who is getting in touch (reader, bookshop or library, press or reviewer, or other), so I can see at a glance what each message is about.
 - A privacy note explaining how visitors' details are used.
 
-<!-- DRAFT NOTE (17 November 2026): rewrite in your own words, then delete this comment.
-- The "Contact and trade" page was split into two pages, Trade and Contact, so each page has one clear job. Bookshops and authors go to Trade; anyone with a question goes to Contact. The navigation now reads Book, About, Trade, Contact on every page.
-- The Contact page is now a single centred column. The Trade page keeps the two-column layout.
--->
-
+Trade and contact information started out on one page, but it looked too busy, so I split it into two. The Trade page is for bookshops, reviewers and authors, and the Contact page is for anyone with a question.
 
 ## Design
 
-The look is dark but stylish, like an old book: a parchment page, near-black story cards and black-line engraving-style artwork as accents. Colours are held as CSS variables so they stay consistent across pages.
+The look is dark but stylish, like an old book: a parchment page, near-black story cards and black-line engraving-style artwork as accents. Woodcuts and an "old book" feel are very common on folk horror websites, so the style tells visitors straight away what kind of fiction the imprint publishes. Colours are held as CSS variables so they stay consistent across pages.
+
+**Fonts**
+
+- **IM Fell English** for headings, the navigation, buttons and drop caps. It looks like an old printed book and adds atmosphere.
+- **EB Garamond** for body text, because it is easier to read in longer passages.
+
+Both come from Google Fonts and are held as CSS variables (`--font-heading` and `--font-body`).
+
+**Colours**
 
 | Name | Hex | Use |
 | :---- | :---- | :---- |
@@ -100,26 +100,19 @@ The look is dark but stylish, like an old book: a parchment page, near-black sto
 | Brass | `#B08D57` | Borders, rules and drop caps on near-black |
 | Cover teal | `#468F7E` | Illustration frames and links on near-black |
 | Soft parchment | `#D8CDB0` | Body text on near-black |
+| Light parchment | `#F3ECDA` | Background of the body text panels |
 
 Near-black on parchment and parchment on near-black both reach a contrast ratio of 13.8:1, which passes WCAG AA. Cover red is never used as text on near-black, and brass and cover teal are never used as text on parchment, because those pairings fail the contrast requirement.
 
 *(TODO, optional: add the colour palette image and wireframes.)*
 
-<!-- DRAFT NOTES (16 November 2026, layout session): rewrite in your own words, then delete this comment.
+**Layout decisions**
 
-Layout and decoration decisions:
-- Centred text on the Book page: the hero, "About the stories" and "Reviews" are centred, with the cover and buy buttons centred beneath the blurb. The story text in the pop-ups stays left-aligned, because long centred passages are harder to read.
-- Centred reviews: the brass rule down the left side looked lopsided on centred text, so centred reviews have short brass rules above and below the quote instead.
-- Story cards: more space between the cards (1.5rem instead of 1rem) and at the screen edges on tablets and larger (3rem instead of 1.5rem), so the grid feels less crowded.
-- Navigation: the nav links sit on the right, with more space between them on tablets and large screens; on phones the collapsed menu is unchanged. An earlier version lined the links up with the Trade page's right-hand column using container query units (cqw), but I simplified it because the calculation was too complex to explain.
-- Carousel arrows: Bootstrap's white arrows are made dark with Bootstrap's own `carousel-dark` class, replacing custom brass SVG arrows written into the CSS.
-- Carousel dots: plain brass circles (an outline for each review, filled for the review on show), made with `border-radius: 50%`.
-- Light text panels: after feedback from my teacher that the body text looked 'floaty', each body text section now sits in a pale parchment box (`--light-parchment`, #F3ECDA) with a thin near-black border to match the divider. The class is `.panel-light`, and it goes on a div inside each Bootstrap column, never on the column itself, so the gaps between columns stay intact.
-- Divider: a plain line with a printer's flower (❧) in the middle, made with CSS flexbox and ::before and ::after. A thorny stem drawn as an SVG mask was tried, but I went back to the printer's flower because it is simpler and I can explain every line of it.
-- Cover leaf: a leaf cut from the cover artwork (assets/images/divider-leaf.webp) was tried in the middle of the divider. The divider looked better as the stem alone, so the leaf is kept for use elsewhere.
--->
-
-
+- **Centred text on the Book page:** the hero and "About the stories" are centred, with the cover and buy buttons beneath the blurb. The story text in the pop-ups stays left-aligned, because long centred passages are harder to read.
+- **Light text panels:** after feedback from my teacher that the body text looked "floaty", each body text section now sits in a pale parchment box (`.panel-light`) with a thin near-black border to match the divider. The class goes on a div inside each Bootstrap column, not on the column itself, so the gaps between columns stay intact.
+- **Divider:** a plain line with a printer's flower (❧) in the middle, made with CSS flexbox and `::before` and `::after`. I chose it because it is simple and I can explain every line of it.
+- **Navigation:** the links sit on the right, with more space between them on tablets and large screens; on phones they collapse into a menu. An earlier version lined the links up with the Trade page's right-hand column using container query units (`cqw`), but I simplified it because the calculation was too complex to explain.
+- **Reviews slider:** the reviews never move on their own, for accessibility; visitors change them with the arrows or dots. Large brass quotation marks in IM Fell English frame each quote. The arrows are made dark with Bootstrap's own `carousel-dark` class, and the dots are plain brass circles, an outline for each review and filled for the one on show.
 
 ## Deployment
 
@@ -130,17 +123,53 @@ The site is deployed with GitHub Pages from the `main` branch.
 3. Under **Build and deployment**, set the source to **Deploy from a branch**, choose `main` and the `/ (root)` folder, then save.
 4. Wait a minute or two, then open the live link at the top of this file.
 
-*(TODO: after deploying, check the live site matches the version running locally.)*
+After deploying, I checked that the live site matches the version running locally. The site will later move to the imprint's own domain, wishhoundspress.com.
 
 To run it locally, clone the repository and open `index.html` in a browser.
 
 ## Testing
 
-*(TODO: complete after testing, and add the screenshots of each result.)*
+### HTML validation
 
-- HTML validated with the W3C Markup Validator (validator.w3.org): all five pages (Book, About, Trade, Contact and Thank you) pass with no errors or warnings. The Book page first showed 7 errors, fixed with ARIA roles (see Bugs and errors). Screenshots are in `docs/testing/validation/`.
-- CSS validated with the W3C CSS Validator (Jigsaw): `assets/css/styles.css` is valid with no errors. The 10 warnings all read "Due to their dynamic nature, CSS variables are currently not statically checked". This is the validator's standard message for any stylesheet that uses CSS variables, not a fault.
-- Lighthouse scores for Performance, Accessibility, Best Practices and SEO, on mobile and desktop for every page: reports and screenshots are in `docs/testing/lighthouse/`.
+Each live page was checked with the [W3C Markup Validation Service](https://validator.w3.org/nu/) on 22 November 2026, with "errors & warnings only" ticked.
+
+| Page | Result | Screenshot |
+| :---- | :---- | :---- |
+| Book (`index.html`), before the fix | 7 errors | [html-index-before.png](docs/testing/validation/html-index-before.png) |
+| Book (`index.html`), after the fix | No errors or warnings | [html-index-after.png](docs/testing/validation/html-index-after.png) |
+| About (`about.html`) | No errors or warnings | [html-about.png](docs/testing/validation/html-about.png) |
+| Trade (`trade.html`) | No errors or warnings | [html-trade.png](docs/testing/validation/html-trade.png) |
+| Contact (`contact.html`) | No errors or warnings | [html-contact.png](docs/testing/validation/html-contact.png) |
+| Thank you (`thank-you.html`) | No errors or warnings | [html-thank-you.png](docs/testing/validation/html-thank-you.png) |
+
+The 7 errors on the Book page were fixed with ARIA roles (see Bugs and errors).
+
+### CSS validation
+
+`assets/css/styles.css` was checked with the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) (CSS level 3 + SVG): no errors found. [Screenshot: css-styles.png](docs/testing/validation/css-styles.png)
+
+The validator lists 14 warnings. They read "Due to their dynamic nature, CSS variables are currently not statically checked", which is the validator's standard message for any stylesheet that uses CSS variables, not a fault.
+
+### Lighthouse
+
+Lighthouse was run on every page in mobile and desktop modes. The reports (open the `.html` files in a browser) and screenshots are in `docs/testing/lighthouse/`.
+
+| Page | Accessibility | Best Practices | SEO |
+| :---- | :---- | :---- | :---- |
+| Book | 100 | 100 | 100 |
+| About | 100 | 100 | 91 |
+| Trade | 100 | 100 | 100 |
+| Contact | 100 | 100 | 100 |
+| Thank you | 100 | 100 | 63 |
+
+Scores were the same on mobile and desktop.
+
+- Thank you (SEO 63): the page has `<meta name="robots" content="noindex">` on purpose, so search engines do not list it. Visitors should only reach it after sending a message.
+- About (SEO 91): the link to the Invisible Works article uses the text "here". Link text should make sense on its own, because screen-reader users often move from link to link. *(TODO: change the link text, then re-run Lighthouse on the About page.)*
+- Performance: *(TODO: run Lighthouse in Chrome DevTools on the live site with all four categories ticked, and add the scores and screenshots.)*
+
+### Other testing
+
 - Responsive layout checked on desktop, tablet and mobile widths: notes to add.
 
 ## Screenshots
@@ -156,85 +185,62 @@ To run it locally, clone the repository and open `index.html` in a browser.
 
 ## Bugs and errors
 
-*(TODO: record the bugs you meet and how you fixed them, and list any that remain.)*
-
 - W3C validator errors on the Book page (22 November 2026): the validator reported 7 errors. A plain `div` is not allowed an `aria-label` or `aria-labelledby` unless it also has a `role`. The reviews carousel had `aria-label` without a role, and the six story pop-ups had `aria-labelledby` without one. Bootstrap adds `role="dialog"` to a pop-up with JavaScript when it opens, but the validator only reads the HTML. Fixed by adding `role="region"` to the carousel (the standard role for an accessible carousel) and `role="dialog"` to each pop-up. The Book page now passes with no errors.
-
-<!-- DRAFT NOTES (16 November 2026): rewrite in your own words, then delete this comment.
-
-- Duplicate h1: adding the blurb created a second <h1> with the book title. A page should have one <h1>, as screen readers use it as the page's main title. Fixed by removing the second one.
-- figcaption inside blockquote: the reviews first had <figcaption> inside <blockquote>, which the W3C validator rejects, because a <figcaption> must sit directly inside a <figure>. Fixed by wrapping each review in a <figure> and moving the <figcaption> after the <blockquote>.
-- Prettier reformatting: saving index.html in VS Code reformatted the whole file, so the commit looked as if every line had changed. Fixed by committing the formatting on its own first, then the content changes, and formatting all three pages the same way.
-- Audio kept playing after a pop-up was closed. Fixed with assets/js/story-audio.js, which pauses the audio when Bootstrap closes the pop-up.
+- Duplicate `<h1>`: adding the blurb created a second `<h1>` with the book title. A page should have one `<h1>`, as screen readers use it as the page's main title. Fixed by removing the second one.
+- `<figcaption>` inside `<blockquote>`: the reviews first had `<figcaption>` inside `<blockquote>`, which the W3C validator rejects, because a `<figcaption>` must sit directly inside a `<figure>`. Fixed by wrapping each review in a `<figure>` and moving the `<figcaption>` after the `<blockquote>`.
 - Video shape: a landscape (16:9) frame would have cropped the portrait trailer to a narrow strip. Fixed by changing the frame to 9:16 with a maximum height.
-- Video file size: the original trailer was 14.6 MB. Resizing it to 720 x 1280 brought it down to about 5 MB, which helps the Lighthouse performance score.
-- Gaps in the thorny stem (fixed before the stem was replaced by the printer's flower): the repeated pattern showed gaps between each section, because the browser kept each tile's proportions when stretching it to fit. Fixed by adding preserveAspectRatio="none" to the SVG.
-- Half-thorns at the ends of the stem (also before it was replaced): the pattern was cut off part-way at each end. Fixed with mask-repeat: round, which stretches the tiles slightly so a whole number fits.
-- Masks blocked when opened from disk: browsers refuse to load a mask image from a separate file when the site is opened directly from the computer (file://). Fixed by writing the SVG into the CSS as a data URI.
-- About page logo squashed on tablets: between 768px and 991px the logo and the text sat side by side, but the logo column was only about 240px wide, so the logo's circular lettering ran into the heading. Fixed by moving the side-by-side layout from Bootstrap's md breakpoint (768px) to lg (992px), so on tablets the logo sits centred above the text.
--->
+- Video file size: the original trailer was 14.6 MB. Resizing it to 720 x 1280 brought it down to about 5 MB, which helps the Lighthouse performance score. The trailer was later remade from my own photographs at the same size, and is now 4.7 MB.
+- About page logo squashed on tablets: between 768px and 991px the logo and the text sat side by side, but the logo column was only about 240px wide, so the logo's circular lettering ran into the heading. Fixed by moving the side-by-side layout from Bootstrap's `md` breakpoint (768px) to `lg` (992px), so on tablets the logo sits centred above the text.
+
+No known bugs remain.
 
 ## Credits and attribution
 
-- Bootstrap 5.3.9, loaded from the jsDelivr CDN.
-- Google Fonts: IM Fell English and EB Garamond.
-- Story title plates and text from *A Book of Short Stories* by Tabitha Potts. The Crow Girl plate is credited in the book as "Illustration by Amy Shepheard".
-- Web3Forms (contact form and newsletter sign-up).
-- The leaf image (`assets/images/divider-leaf.webp`) is cut from the cover artwork of *A Book of Short Stories*. The thorny stem divider is drawn in the style of the cover's vines. *(TODO: add the cover artist's credit.)*
+**Code and services**
 
-*(TODO: list every external source, for example Bootstrap, any fonts, icons, images and the Web3Forms and Mailchimp services. Say where each came from.)*
+- [Bootstrap 5.3.9](https://getbootstrap.com/), loaded from the jsDelivr CDN, for layout, the navigation, the reviews slider and the story pop-ups.
+- [Google Fonts](https://fonts.google.com/): IM Fell English and EB Garamond.
+- [Web3Forms](https://web3forms.com/) for the contact form and newsletter sign-up.
 
-<!-- DRAFT NOTES (16 November 2026): check, rewrite in your own words, then delete this comment.
+**Images**
 
-- Book trailer: remade from the author's own crow photographs, set in EB Garamond, with the author's narration; built by Claude at the author's request.
-- Audio samples: read by the author, taken from the audiobook of A Book of Short Stories (Audible). Used under the ACX terms for Audible Exclusive titles, which allow verbatim excerpts of up to 10% of the audiobook's length on the rights holder's own website to promote it.
-- Reviews: William J Brown in Horrified Magazine, and I. Rosenfeld for the British Fantasy Society. Consider adding links to the original reviews.
--->
+- Cover design of *A Book of Short Stories* by Sophie Harris-Greenslade.
+- The story title plates are from *A Book of Short Stories*. They were either sourced from out-of-copyright images or created by me, except the Crow Girl plate, which is credited in the book as "Illustration by Amy Shepheard".
+
+**Video and audio**
+
+- Crow Girl trailer: made from my own crow photographs, set in EB Garamond, with my narration. Built by Claude at my request.
+- Audio samples: read by me, taken from the audiobook of *A Book of Short Stories* on Audible. As the audiobook is exclusive to Audible through ACX, excerpts on my own website must be verbatim and no longer than 5 minutes or 10% of the audiobook's length, whichever is longer. The samples total about 7 minutes.
+
+**Text and reviews**
+
+- Story openings and the blurb are from *A Book of Short Stories* by Tabitha Potts.
+- Reviews by William J Brown in *Horrified Magazine*, I. Rosenfeld for the British Fantasy Society, and strange.scholar on Instagram.
 
 ## Declaration of AI use
 
-**Build notes for the declaration (delete once it is written):**
+I used Claude, in the Claude desktop app, and Claude Code, in VS Code. I used them to create a prototype of the site from the brief I had already worked out, then edited it to reach the aesthetic and functionality I wanted. For personal reasons I was not able to build the site step by step, as I had originally planned, but I am pleased with the result and plan to use it on my own site.
 
-- 15 November 2026: Claude (Anthropic) wrote the first version of `index.html`, `about.html`, `contact.html`, `assets/css/styles.css` and `assets/js/contact.js` from my brief, wireframes and colour palette.
-- Claude converted the logo and the story title plates to WebP, and copied the opening paragraphs of each story from the print PDF into the modals.
-- Claude drafted the legend paragraph, the author bio and the privacy note. I need to check and rewrite these.
-- Everything changed after that date is my own work unless noted here.
-- 22 November 2026: Claude built a new Crow Girl trailer at my request, from my own crow photographs, set in EB Garamond, with my narration. It replaces the earlier trailer.
-- 22 November 2026: at my teacher's request, Claude replaced the contact form script (`assets/js/contact.js`) with a no-JavaScript version: a Web3Forms `redirect` field and a new `thank-you.html` page.
+**What Claude did**
 
-<!-- DRAFT NOTES (16 November 2026): rewrite in your own words for the declaration, then delete this comment.
+- Built the first version of the pages and the stylesheet from my brief, wireframes and colour palette.
+- Converted the logo and story title plates to WebP, and copied the opening of each story from the print PDF into the pop-ups.
+- Drafted the first versions of the legend paragraph, the author bio and the privacy note, which I then checked.
+- Cut the audio samples from my audiobook and wrote the audio player code. Edited the original trailer, and later built the new trailer from my photographs.
+- Found and fixed HTML validator errors, and ran Lighthouse and validation checks.
+- Replaced the contact form script with a version that needs no JavaScript, at my teacher's request.
+- Created the planning issues on my GitHub project board, and wrote commit messages.
 
-What Claude did on 16 November:
-- Suggested a portrait video frame, and wrote the HTML and CSS for it.
-- Edited the original trailer (since replaced): removed the music, cut the out-of-date end card, resized it to 720 x 1280, slowed it to two-thirds speed and made a poster still.
-- Checked the GitHub Pages file size limits and the ACX rules on audio excerpts for Audible Exclusive titles.
-- Cut and converted the Crow Girl audio sample, and wrote the audio player markup, styles and the script that stops the audio when a pop-up closes.
-- Reviewed my new blurb and reviews code, found two validator errors (a duplicate h1 and figcaption inside blockquote) and fixed them at my request.
-- Restructured the Book page at my request: short hero, new "About the stories" and "Reviews" sections, awards moved to the About page. Changed quotes to curly quotes and story titles to italics.
-- Split the work into separate commits, including a formatting-only commit.
+**What I decided and did myself**
 
-What I did and decided myself:
-- Chose to make the video portrait, to remove the music, to cut the end card and to slow the video down (original trailer, since replaced).
-- Wrote the blurb, story descriptions, awards paragraph and chose the reviews.
-- Narrated the audiobook, chose the length of the audio sample (to match the written excerpt) and confirmed the cut point by ear.
-- Decided the house style: curly quotes, italic titles and "Potts’".
+- Wrote the brief and planned the site: its audiences, pages, colours and wireframes.
+- Wrote the blurb, story descriptions and awards, and chose the reviews.
+- Narrated the audiobook and the trailer, and chose where each audio sample should end.
+- Chose the house style: curly quotes, italic titles and "Potts'".
+- Made the design decisions in the Layout decisions section above, including the text panels after my teacher's feedback, the printer's flower divider, the simpler navigation and a reviews slider that doesn't move on its own.
+- Split trade and contact information into two pages because one page looked too busy, and chose a portrait frame for the trailer.
 
-What Claude did later on 16 November (layout session):
-- Created the 20 planning issues, labels and milestones on GitHub from my markdown file, and added them to the project board with a Priority field.
-- Centred the Book page text, added space around the story cards and spread out the navbar, at my request.
-- Cut a leaf from the cover artwork and made its background transparent, then drew the thorny stem divider in the style of the cover.
-- Checked the divider at desktop and phone widths with screenshots, and fixed the gaps and half-thorns it found.
-- Wrote the commit messages and split the work into separate commits.
-
-What I did and decided myself (layout session):
-- Supplied the planning issues, based on my Product Definition Challenge scores, and chose to track them on the project board. (TODO: say who drafted the issue text.)
-- Asked for centred text, more space around the cards and a wider navbar lined up with the second column.
-- Had the idea of reusing the cover artwork for the dividers, asked for a thorny stem, and chose the stem without the leaf.
-
-Reflection prompts for the course: where did AI save time (media editing, spotting validator errors)? Where did you need to check its work (the audio cut point it could not hear, the ACX terms)? How did it change your workflow?
--->
-
-*(TODO: write this in your own words once the build is finished. Say which tools you used, what you used them for, and the decisions you made yourself. The course also asks for short reflections on AI in code creation, debugging and optimisation, and on its overall effect on your workflow.)*
+*(TODO, optional: add short reflections on AI in code creation, debugging and optimisation, and on its overall effect on your workflow.)*
 
 ## Planned future updates
 

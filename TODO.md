@@ -8,14 +8,14 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 - [x] `index.html`: the book blurb in the hero
 - [x] `index.html`: the "Coming soon" line about the next collection
 - [x] `about.html`: why you started the imprint
-- [ ] `about.html`: check the legend paragraph and the author bio (both are drafts)
+- [x] `about.html`: check the legend paragraph and the author bio (both are drafts)
 - [x] `trade.html`: trade details (ISBN, format, pages, price, publication date)
-- [ ] `contact.html`: check the privacy wording matches what you actually do
+- [x] `contact.html`: check the privacy wording matches what you actually do
 
 ## Links and services to connect
 
 - [x] `index.html`: ebook and audiobook buttons link to Amazon UK with `?tag=mrstabithapot-21`. The paperback button links to IngramSpark
-- [ ] Footer on all four pages: Instagram and Facebook links still point to `#`
+- [x] Footer: Instagram and Facebook placeholders replaced with a "Join the newsletter" link to the sign-up box on the About page (all five pages)
 - [x] Web3Forms access key added to the contact and newsletter forms (the same key works locally and on the live site)
 - [ ] Send a test message from both forms on the live site and check the thank-you page appears
 - [x] `about.html`: newsletter form now uses Web3Forms (signups arrive by email; add them to the mailing list by hand). Change its `redirect` too when wishhoundspress.com goes live
@@ -43,7 +43,7 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 ## Before you submit
 
 - [x] Delete the old, unused image and video files
-- [ ] Validate the HTML (validator.w3.org) and CSS (jigsaw.w3.org/css-validator)
+- [x] Validate the HTML (validator.w3.org) and CSS (jigsaw.w3.org/css-validator)
 - [ ] Run Lighthouse in Chrome DevTools
 - [ ] Finish the README: screenshots, testing results, credits and the AI declaration in your own words
 - [ ] Commit in small steps with clear messages
