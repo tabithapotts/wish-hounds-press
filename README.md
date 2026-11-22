@@ -113,6 +113,7 @@ Layout and decoration decisions:
 - Centred reviews: the brass rule down the left side looked lopsided on centred text, so centred reviews have short brass rules above and below the quote instead.
 - Story cards: more space between the cards (1.5rem instead of 1rem) and at the screen edges on tablets and larger (3rem instead of 1.5rem), so the grid feels less crowded.
 - Navigation: on large screens the nav links spread across the same width as the right-hand column of the Contact page, so "Book" lines up with the start of that column. On tablets the links have a little more space between them; on phones the collapsed menu is unchanged.
+- Light text panels: after feedback from my teacher that the body text looked 'floaty', each body text section now sits in a pale parchment box (`--light-parchment`, #F3ECDA) with a thin near-black border to match the divider. The class is `.panel-light`, and it goes on a div inside each Bootstrap column, never on the column itself, so the gaps between columns stay intact.
 - Divider: a plain line with a printer's flower (❧) in the middle, made with CSS flexbox and ::before and ::after. A thorny stem drawn as an SVG mask was tried, but I went back to the printer's flower because it is simpler and I can explain every line of it.
 - Cover leaf: a leaf cut from the cover artwork (assets/images/divider-leaf.webp) was tried in the middle of the divider. The divider looked better as the stem alone, so the leaf is kept for use elsewhere.
 -->

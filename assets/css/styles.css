@@ -20,6 +20,7 @@
 :root {
     --parchment: #E8DCC0;
     --soft-parchment: #D8CDB0;
+    --light-parchment: #F3ECDA;
     --near-black: #14110F;
     --cover-red: #B10034;
     --deep-teal: #2F6B5C;
@@ -600,6 +601,22 @@ textarea:focus-visible {
 .panel-dark a:hover,
 .panel-dark a:focus {
     color: var(--parchment);
+}
+
+/* Light panel: a pale parchment box with a thin near-black rule around it,
+   matching the divider, so body text sits on the page instead of floating.
+   It goes on a div INSIDE a Bootstrap column, never on the column itself,
+   because the columns use their padding for the gaps between them. */
+.panel-light {
+    background-color: var(--light-parchment);
+    border: 1px solid var(--near-black);
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .panel-light {
+        padding: 2rem;
+    }
 }
 
 /* 10. About page

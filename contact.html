@@ -89,106 +89,108 @@
           <div class="row justify-content-center">
             <!-- ===== Contact form (Web3Forms) ===== -->
             <div class="col-lg-8">
-              <h1 id="contact-title">Contact</h1>
-              <p>
-                Questions from readers, bookshops and the press are all welcome.
-                Bookshops and libraries can find the book&rsquo;s details on the
-                <a href="trade.html">trade page</a>.
-              </p>
+              <div class="panel-light">
+                <h1 id="contact-title">Contact</h1>
+                <p>
+                  Questions from readers, bookshops and the press are all welcome.
+                  Bookshops and libraries can find the book&rsquo;s details on the
+                  <a href="trade.html">trade page</a>.
+                </p>
 
-              <!-- The form works without any JavaScript: the browser sends it straight to Web3Forms,
-                   which emails it to us and then opens thank-you.html (see the "redirect" field).
-                   The required fields and type="email" give instant feedback before sending.
-                   Web3Forms sends each message to the email address linked to this access key.
-                   The key is designed to be public, so it is safe in the page code.
-                   TODO: this is the localhost (testing) key. Swap in the live site key before launch. -->
-              <form
-                id="contact-form"
-                action="https://api.web3forms.com/submit"
-                method="post"
-              >
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="13659252-4d3a-4efe-9a9f-c3073955dd3c"
-                />
-                <input
-                  type="hidden"
-                  name="subject"
-                  value="New message from wishhoundspress.co.uk"
-                />
-                <!-- After the message is sent, Web3Forms takes the visitor to our own thank-you page.
-                     It must be the full web address, because Web3Forms sends the visitor there from its server. -->
-                <input
-                  type="hidden"
-                  name="redirect"
-                  value="https://wishhoundspress.co.uk/thank-you.html"
-                />
-                <!-- A hidden box that real visitors never tick; it catches spam robots -->
-                <input
-                  type="checkbox"
-                  name="botcheck"
-                  class="d-none"
-                  tabindex="-1"
-                />
+                <!-- The form works without any JavaScript: the browser sends it straight to Web3Forms,
+                     which emails it to us and then opens thank-you.html (see the "redirect" field).
+                     The required fields and type="email" give instant feedback before sending.
+                     Web3Forms sends each message to the email address linked to this access key.
+                     The key is designed to be public, so it is safe in the page code.
+                     TODO: this is the localhost (testing) key. Swap in the live site key before launch. -->
+                <form
+                  id="contact-form"
+                  action="https://api.web3forms.com/submit"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="13659252-4d3a-4efe-9a9f-c3073955dd3c"
+                  />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New message from wishhoundspress.co.uk"
+                  />
+                  <!-- After the message is sent, Web3Forms takes the visitor to our own thank-you page.
+                       It must be the full web address, because Web3Forms sends the visitor there from its server. -->
+                  <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://wishhoundspress.co.uk/thank-you.html"
+                  />
+                  <!-- A hidden box that real visitors never tick; it catches spam robots -->
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="d-none"
+                    tabindex="-1"
+                  />
 
-                <div class="mb-3">
-                  <label for="contact-name" class="form-label">Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="contact-name"
-                    name="name"
-                    autocomplete="name"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="contact-email" class="form-label"
-                    >Email address</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="contact-email"
-                    name="email"
-                    autocomplete="email"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="contact-type" class="form-label">I am a</label>
-                  <select
-                    class="form-select"
-                    id="contact-type"
-                    name="enquiry_type"
-                    required
-                  >
-                    <option value="" selected disabled>Please choose</option>
-                    <option value="Reader">Reader</option>
-                    <option value="Bookshop or library">
-                      Bookshop or library
-                    </option>
-                    <option value="Press or reviewer">Press or reviewer</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="contact-message" class="form-label"
-                    >Message</label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="contact-message"
-                    name="message"
-                    rows="6"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-buy" id="contact-submit">
-                  Send message
-                </button>
-              </form>
+                  <div class="mb-3">
+                    <label for="contact-name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="contact-name"
+                      name="name"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="contact-email" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="contact-email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="contact-type" class="form-label">I am a</label>
+                    <select
+                      class="form-select"
+                      id="contact-type"
+                      name="enquiry_type"
+                      required
+                    >
+                      <option value="" selected disabled>Please choose</option>
+                      <option value="Reader">Reader</option>
+                      <option value="Bookshop or library">
+                        Bookshop or library
+                      </option>
+                      <option value="Press or reviewer">Press or reviewer</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contact-message" class="form-label"
+                      >Message</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="contact-message"
+                      name="message"
+                      rows="6"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-buy" id="contact-submit">
+                    Send message
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -201,22 +203,24 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <h2 id="privacy-title">Privacy</h2>
-              <!-- TODO: draft wording. Check it matches what you actually do with people's details. -->
-              <p>
-                When you use the contact form, your name, email address and
-                message are sent to Wish Hounds Press by a service called
-                Web3Forms, and are used only to reply to you.
-              </p>
-              <p>
-                If you join the newsletter, your email address is stored by
-                Mailchimp and used only to send the newsletter. Every email has
-                an unsubscribe link.
-              </p>
-              <p class="mb-0">
-                Your details are never sold or shared. To ask for them to be
-                deleted, use the contact form.
-              </p>
+              <div class="panel-light">
+                <h2 id="privacy-title">Privacy</h2>
+                <!-- TODO: draft wording. Check it matches what you actually do with people's details. -->
+                <p>
+                  When you use the contact form, your name, email address and
+                  message are sent to Wish Hounds Press by a service called
+                  Web3Forms, and are used only to reply to you.
+                </p>
+                <p>
+                  If you join the newsletter, your email address is stored by
+                  Mailchimp and used only to send the newsletter. Every email has
+                  an unsubscribe link.
+                </p>
+                <p class="mb-0">
+                  Your details are never sold or shared. To ask for them to be
+                  deleted, use the contact form.
+                </p>
+              </div>
             </div>
           </div>
         </div>

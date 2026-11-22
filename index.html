@@ -86,149 +86,151 @@
         <div class="container">
           <div class="row align-items-center gy-4">
             <div class="col-lg-6 text-center">
-              <p class="tagline mb-1">Stories to haunt you</p>
-              <h1 id="hero-title">A Book of Short Stories</h1>
-              <p>
-                This illustrated short story collection brings together some of
-                the dark short fiction author Tabitha Potts has published in
-                literary magazines and online. Issued in a second edition for
-                Kindle, Audible and paperback, it features a beautiful new
-                artist-designed cover. The author is inspired by nature,
-                folklore, myth and local history and her interest in how women
-                survive in a patriarchal society.
-              </p>
-              <p>
-                Sample every story below, then choose how you would like to read
-                or listen.
-              </p>
+              <div class="panel-light">
+                <p class="tagline mb-1">Stories to haunt you</p>
+                <h1 id="hero-title">A Book of Short Stories</h1>
+                <p>
+                  This illustrated short story collection brings together some of
+                  the dark short fiction author Tabitha Potts has published in
+                  literary magazines and online. Issued in a second edition for
+                  Kindle, Audible and paperback, it features a beautiful new
+                  artist-designed cover. The author is inspired by nature,
+                  folklore, myth and local history and her interest in how women
+                  survive in a patriarchal society.
+                </p>
+                <p>
+                  Sample every story below, then choose how you would like to read
+                  or listen.
+                </p>
 
-              <!-- Cover and buy buttons side by side, like a shop listing.
-                   The cover is near the top of the page, so it is not lazy-loaded.
-                   width and height stop the page jumping while the image loads; CSS sets the display size. -->
-              <div
-                id="buy"
-                class="buy-box d-flex justify-content-center align-items-center gap-3 mb-3"
-              >
-                <img
-                  src="assets/images/a-book-of-short-stories-cover.webp"
-                  class="buy-cover"
-                  alt="Cover of A Book of Short Stories by Tabitha Potts: an engraving of a crow among thorny leaves"
-                  width="800"
-                  height="1132"
-                />
-                <!-- Buy buttons.
-                     Paperback: IngramSpark shop (buying direct). Not an affiliate link, so no rel="sponsored".
-                     Ebook and audiobook: Amazon UK, with the Associates tag (affiliate links, so rel="sponsored"). -->
-                <div class="buy-buttons d-flex flex-column gap-2">
-                  <a
-                    href="https://shop.ingramspark.com/b/084?params=6ykYM9mXqw6r4M03lhfGbEJOFAWCTJF1TkVUS6pq0SB"
-                    class="btn btn-buy"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Buy the paperback direct from IngramSpark (opens in a new tab)"
-                    >Paperback</a
-                  >
-                  <a
-                    href="https://www.amazon.co.uk/dp/B0D8HFVPBK?tag=mrstabithapot-21"
-                    class="btn btn-outline-ink"
-                    target="_blank"
-                    rel="noopener sponsored"
-                    aria-label="Buy the ebook for Kindle on Amazon (opens in a new tab)"
-                    >Ebook</a
-                  >
-                  <a
-                    href="https://www.amazon.co.uk/dp/B0CGVYDJV1?tag=mrstabithapot-21"
-                    class="btn btn-outline-ink"
-                    target="_blank"
-                    rel="noopener sponsored"
-                    aria-label="Buy the audiobook on Amazon (opens in a new tab)"
-                    >Audiobook</a
-                  >
-                </div>
-              </div>
-              <p class="small-print mb-0">
-                As an Amazon Associate, Wish Hounds Press earns from qualifying
-                purchases.
-              </p>
-
-              <!-- Reviews slider (Bootstrap carousel).
-                   carousel-fade cross-fades instead of sliding. There is no data-bs-ride,
-                   so it never moves on its own: visitors change slides with the arrows or dots
-                   (WCAG 2.2.2, nothing moves without the visitor choosing it).
-                   aria-roledescription tells screen readers this is a carousel made of slides. -->
-              <div
-                id="reviews-carousel"
-                class="carousel slide carousel-fade review-carousel mt-4"
-                aria-roledescription="carousel"
-                aria-label="Reviews of Crow Girl"
-              >
-                <div class="carousel-inner">
-                  <!-- Slide 1: Horrified Magazine. "active" marks the slide shown first; only one slide has it. -->
-                  <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="1 of 3">
-                    <figure class="review">
-                      <blockquote class="blockquote">
-                        <p>
-                          Tabitha Potts’ <em>Crow Girl</em> is wonderfully eldritch
-                          and twisted … Potts’ character building is quite
-                          spellbinding.
-                        </p>
-                      </blockquote>
-                      <figcaption class="blockquote-footer">
-                        William J Brown in <cite>Horrified Magazine</cite>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <!-- Slide 2: British Fantasy Society -->
-                  <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="2 of 3">
-                    <figure class="review">
-                      <blockquote class="blockquote">
-                        <p>
-                          Tabitha Potts’ work is also outstanding … Told like a
-                          traditional fairy tale but using language in sparse,
-                          poetic and powerful ways.
-                        </p>
-                      </blockquote>
-                      <figcaption class="blockquote-footer">
-                        I. Rosenfeld for the <cite>British Fantasy Society</cite>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <!-- Slide 3: strange.scholar on Instagram -->
-                  <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="3 of 3">
-                    <figure class="review">
-                      <blockquote class="blockquote">
-                        <p>
-                          There is a brightness present in this story amongst its
-                          horror … This is a story to remember.
-                        </p>
-                      </blockquote>
-                      <figcaption class="blockquote-footer">
-                        <a href="https://www.instagram.com/strange.scholar">strange.scholar</a>
-                        on Instagram, reviewing <em>Crow Girl</em>
-                      </figcaption>
-                    </figure>
+                <!-- Cover and buy buttons side by side, like a shop listing.
+                     The cover is near the top of the page, so it is not lazy-loaded.
+                     width and height stop the page jumping while the image loads; CSS sets the display size. -->
+                <div
+                  id="buy"
+                  class="buy-box d-flex justify-content-center align-items-center gap-3 mb-3"
+                >
+                  <img
+                    src="assets/images/a-book-of-short-stories-cover.webp"
+                    class="buy-cover"
+                    alt="Cover of A Book of Short Stories by Tabitha Potts: an engraving of a crow among thorny leaves"
+                    width="800"
+                    height="1132"
+                  />
+                  <!-- Buy buttons.
+                       Paperback: IngramSpark shop (buying direct). Not an affiliate link, so no rel="sponsored".
+                       Ebook and audiobook: Amazon UK, with the Associates tag (affiliate links, so rel="sponsored"). -->
+                  <div class="buy-buttons d-flex flex-column gap-2">
+                    <a
+                      href="https://shop.ingramspark.com/b/084?params=6ykYM9mXqw6r4M03lhfGbEJOFAWCTJF1TkVUS6pq0SB"
+                      class="btn btn-buy"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Buy the paperback direct from IngramSpark (opens in a new tab)"
+                      >Paperback</a
+                    >
+                    <a
+                      href="https://www.amazon.co.uk/dp/B0D8HFVPBK?tag=mrstabithapot-21"
+                      class="btn btn-outline-ink"
+                      target="_blank"
+                      rel="noopener sponsored"
+                      aria-label="Buy the ebook for Kindle on Amazon (opens in a new tab)"
+                      >Ebook</a
+                    >
+                    <a
+                      href="https://www.amazon.co.uk/dp/B0CGVYDJV1?tag=mrstabithapot-21"
+                      class="btn btn-outline-ink"
+                      target="_blank"
+                      rel="noopener sponsored"
+                      aria-label="Buy the audiobook on Amazon (opens in a new tab)"
+                      >Audiobook</a
+                    >
                   </div>
                 </div>
+                <p class="small-print mb-0">
+                  As an Amazon Associate, Wish Hounds Press earns from qualifying
+                  purchases.
+                </p>
 
-                <!-- Previous and next arrows. data-bs-target names the carousel's id;
-                     the visually-hidden text gives screen readers a label for each button. -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#reviews-carousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous review</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#reviews-carousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next review</span>
-                </button>
+                <!-- Reviews slider (Bootstrap carousel).
+                     carousel-fade cross-fades instead of sliding. There is no data-bs-ride,
+                     so it never moves on its own: visitors change slides with the arrows or dots
+                     (WCAG 2.2.2, nothing moves without the visitor choosing it).
+                     aria-roledescription tells screen readers this is a carousel made of slides. -->
+                <div
+                  id="reviews-carousel"
+                  class="carousel slide carousel-fade review-carousel mt-4"
+                  aria-roledescription="carousel"
+                  aria-label="Reviews of Crow Girl"
+                >
+                  <div class="carousel-inner">
+                    <!-- Slide 1: Horrified Magazine. "active" marks the slide shown first; only one slide has it. -->
+                    <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                      <figure class="review">
+                        <blockquote class="blockquote">
+                          <p>
+                            Tabitha Potts’ <em>Crow Girl</em> is wonderfully eldritch
+                            and twisted … Potts’ character building is quite
+                            spellbinding.
+                          </p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          William J Brown in <cite>Horrified Magazine</cite>
+                        </figcaption>
+                      </figure>
+                    </div>
 
-                <!-- Dots, one per slide. Bootstrap counts slides from 0, so slide 3 is data-bs-slide-to="2".
-                     They sit below the quote (see styles.css) so they never cover the text. -->
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
-                  <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="1" aria-label="Review 2"></button>
-                  <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="2" aria-label="Review 3"></button>
+                    <!-- Slide 2: British Fantasy Society -->
+                    <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                      <figure class="review">
+                        <blockquote class="blockquote">
+                          <p>
+                            Tabitha Potts’ work is also outstanding … Told like a
+                            traditional fairy tale but using language in sparse,
+                            poetic and powerful ways.
+                          </p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          I. Rosenfeld for the <cite>British Fantasy Society</cite>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+                    <!-- Slide 3: strange.scholar on Instagram -->
+                    <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                      <figure class="review">
+                        <blockquote class="blockquote">
+                          <p>
+                            There is a brightness present in this story amongst its
+                            horror … This is a story to remember.
+                          </p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          <a href="https://www.instagram.com/strange.scholar">strange.scholar</a>
+                          on Instagram, reviewing <em>Crow Girl</em>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+
+                  <!-- Previous and next arrows. data-bs-target names the carousel's id;
+                       the visually-hidden text gives screen readers a label for each button. -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#reviews-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous review</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#reviews-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next review</span>
+                  </button>
+
+                  <!-- Dots, one per slide. Bootstrap counts slides from 0, so slide 3 is data-bs-slide-to="2".
+                       They sit below the quote (see styles.css) so they never cover the text. -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
+                    <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="1" aria-label="Review 2"></button>
+                    <button type="button" data-bs-target="#reviews-carousel" data-bs-slide-to="2" aria-label="Review 3"></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -280,34 +282,36 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-              <h2 id="about-stories-title">About the stories</h2>
-              <p>
-                You will find supernatural stories in this haunting collection
-                as well as realist fiction. The themes which link these short
-                stories are transformation and transfiguration. The author is
-                interested in liminal spaces and thresholds between worlds.
-              </p>
-              <p>
-                Some stories fit into the folk horror genre, such as
-                <em>The Djinn</em> and <em>The Bells of London Town</em> set in
-                East London and <em>Crow Girl</em> and <em>Hagstone</em> set in
-                rural England.
-              </p>
-              <p>
-                <em>The Djinn</em> tells the story of an exorcism in a British
-                Bangladeshi household while <em>The Bells of London Town</em>
-                explores folklore about fairy bells and the famous nursery rhyme
-                to create a story about a banker lured to his fate by the
-                mysterious bells of the City.
-              </p>
-              <p>
-                <em>Crow Girl</em> tells a story of an outsider in a remote
-                community who fights prejudice and abuse. <em>Hagstone</em> is
-                set in Norfolk and tells the story of a female academic in the
-                throes of a divorce who finds a witch bottle in her home.
-                <em>The Edge</em> is a realist story told from the point of view
-                of a young girl on holiday.
-              </p>
+              <div class="panel-light">
+                <h2 id="about-stories-title">About the stories</h2>
+                <p>
+                  You will find supernatural stories in this haunting collection
+                  as well as realist fiction. The themes which link these short
+                  stories are transformation and transfiguration. The author is
+                  interested in liminal spaces and thresholds between worlds.
+                </p>
+                <p>
+                  Some stories fit into the folk horror genre, such as
+                  <em>The Djinn</em> and <em>The Bells of London Town</em> set in
+                  East London and <em>Crow Girl</em> and <em>Hagstone</em> set in
+                  rural England.
+                </p>
+                <p>
+                  <em>The Djinn</em> tells the story of an exorcism in a British
+                  Bangladeshi household while <em>The Bells of London Town</em>
+                  explores folklore about fairy bells and the famous nursery rhyme
+                  to create a story about a banker lured to his fate by the
+                  mysterious bells of the City.
+                </p>
+                <p>
+                  <em>Crow Girl</em> tells a story of an outsider in a remote
+                  community who fights prejudice and abuse. <em>Hagstone</em> is
+                  set in Norfolk and tells the story of a female academic in the
+                  throes of a divorce who finds a witch bottle in her home.
+                  <em>The Edge</em> is a realist story told from the point of view
+                  of a young girl on holiday.
+                </p>
+              </div>
             </div>
           </div>
         </div>
