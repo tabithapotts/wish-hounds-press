@@ -68,7 +68,7 @@ About page changes:
 **About page**
 
 - The imprint's story and the Devon legend behind its name, plus a short author bio.
-- A Mailchimp newsletter sign-up, so interested readers can hear about new titles.
+- A newsletter sign-up, so interested readers can hear about new titles. It uses Web3Forms with no JavaScript, like the contact form: each signup arrives by email and is added to the mailing list by hand.
 
 **Trade page**
 
@@ -177,7 +177,7 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Bootstrap 5.3.9, loaded from the jsDelivr CDN.
 - Google Fonts: IM Fell English and EB Garamond.
 - Story title plates and text from *A Book of Short Stories* by Tabitha Potts. The Crow Girl plate is credited in the book as "Illustration by Amy Shepheard".
-- Web3Forms (contact form) and Mailchimp (newsletter).
+- Web3Forms (contact form and newsletter sign-up).
 - The leaf image (`assets/images/divider-leaf.webp`) is cut from the cover artwork of *A Book of Short Stories*. The thorny stem divider is drawn in the style of the cover's vines. *(TODO: add the cover artist's credit.)*
 
 *(TODO: list every external source, for example Bootstrap, any fonts, icons, images and the Web3Forms and Mailchimp services. Say where each came from.)*

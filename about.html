@@ -177,7 +177,7 @@
         </div>
       </div>
 
-      <!-- ===== Newsletter (Mailchimp) ===== -->
+      <!-- ===== Newsletter (Web3Forms) ===== -->
       <section
         class="section pt-0"
         id="newsletter"
@@ -193,10 +193,32 @@
                   can unsubscribe at any time.
                 </p>
 
-                <!-- TODO: this form does not send anything yet.
-                                 In Mailchimp, go to Audience > Signup forms > Embedded forms and copy the form's "action" address.
-                                 Paste it in place of the # below. Mailchimp expects the email field to be named EMAIL. -->
-                <form action="#" method="post" target="_blank">
+                <!-- Works like the contact form, with no JavaScript: the browser sends the email address
+                     to Web3Forms, which emails it to us, then opens thank-you.html.
+                     We add each address to the mailing list by hand. -->
+                <form action="https://api.web3forms.com/submit" method="post">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="13659252-4d3a-4efe-9a9f-c3073955dd3c"
+                  />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New newsletter signup"
+                  />
+                  <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://tabithapotts.github.io/wish-hounds-press/thank-you.html"
+                  />
+                  <!-- A hidden box that real visitors never tick; it catches spam robots -->
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="d-none"
+                    tabindex="-1"
+                  />
                   <div class="row g-2 align-items-end">
                     <div class="col-sm-8">
                       <label for="newsletter-email" class="form-label"
@@ -206,7 +228,7 @@
                         type="email"
                         class="form-control"
                         id="newsletter-email"
-                        name="EMAIL"
+                        name="email"
                         autocomplete="email"
                         required
                       />
@@ -220,8 +242,8 @@
                 </form>
 
                 <p class="small-print mt-3 mb-0">
-                  Your email address is stored by Mailchimp and used only to
-                  send this newsletter. See the
+                  Your email address is sent to Wish Hounds Press by Web3Forms
+                  and used only to send this newsletter. See the
                   <a href="contact.html#privacy">privacy note</a>.
                 </p>
               </div>
