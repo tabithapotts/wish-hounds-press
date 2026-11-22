@@ -83,7 +83,7 @@ About page changes:
 
 <!-- DRAFT NOTE (17 November 2026): rewrite in your own words, then delete this comment.
 - The "Contact and trade" page was split into two pages, Trade and Contact, so each page has one clear job. Bookshops and authors go to Trade; anyone with a question goes to Contact. The navigation now reads Book, About, Trade, Contact on every page.
-- The Contact page is now a single centred column. The Trade page keeps the two-column layout, and the navbar still lines up with its right-hand column on large screens.
+- The Contact page is now a single centred column. The Trade page keeps the two-column layout.
 -->
 
 
@@ -112,7 +112,9 @@ Layout and decoration decisions:
 - Centred text on the Book page: the hero, "About the stories" and "Reviews" are centred, with the cover and buy buttons centred beneath the blurb. The story text in the pop-ups stays left-aligned, because long centred passages are harder to read.
 - Centred reviews: the brass rule down the left side looked lopsided on centred text, so centred reviews have short brass rules above and below the quote instead.
 - Story cards: more space between the cards (1.5rem instead of 1rem) and at the screen edges on tablets and larger (3rem instead of 1.5rem), so the grid feels less crowded.
-- Navigation: on large screens the nav links spread across the same width as the right-hand column of the Contact page, so "Book" lines up with the start of that column. On tablets the links have a little more space between them; on phones the collapsed menu is unchanged.
+- Navigation: the nav links sit on the right, with more space between them on tablets and large screens; on phones the collapsed menu is unchanged. An earlier version lined the links up with the Trade page's right-hand column using container query units (cqw), but I simplified it because the calculation was too complex to explain.
+- Carousel arrows: Bootstrap's white arrows are made dark with Bootstrap's own `carousel-dark` class, replacing custom brass SVG arrows written into the CSS.
+- Carousel dots: plain brass circles (an outline for each review, filled for the review on show), made with `border-radius: 50%`.
 - Light text panels: after feedback from my teacher that the body text looked 'floaty', each body text section now sits in a pale parchment box (`--light-parchment`, #F3ECDA) with a thin near-black border to match the divider. The class is `.panel-light`, and it goes on a div inside each Bootstrap column, never on the column itself, so the gaps between columns stay intact.
 - Divider: a plain line with a printer's flower (❧) in the middle, made with CSS flexbox and ::before and ::after. A thorny stem drawn as an SVG mask was tried, but I went back to the printer's flower because it is simpler and I can explain every line of it.
 - Cover leaf: a leaf cut from the cover artwork (assets/images/divider-leaf.webp) was tried in the middle of the divider. The divider looked better as the stem alone, so the leaf is kept for use elsewhere.

@@ -182,28 +182,14 @@ textarea:focus-visible {
     }
 }
 
-/* Large screens: the nav spans the same width as the right-hand column
-   of the Trade page (col-lg-5), so "Book" lines up with the start of that
-   column and the links spread out evenly across it.
-   container-type lets cqw measure the container's width:
-   100cqw is the full content width, and the column starts 7/12 of the way
-   across (allowing for Bootstrap's 1.5rem gutter). */
+/* Large screens: more space between the nav links */
 @media (min-width: 992px) {
-    .site-header .navbar > .container {
-        container-type: inline-size;
-    }
-
     .navbar-nav {
-        width: calc(100cqw - 7 / 12 * (100cqw + 1.5rem));
-        justify-content: space-between;
-        gap: 0;
+        gap: 2rem;
     }
 
-    /* Remove the outer padding so the text sits on the column edges */
-    .navbar-expand-md .navbar-nav .nav-item:first-child .nav-link {
-        padding-left: 0;
-    }
-
+    /* Remove the padding after the last link so "Contact" lines up
+       with the right-hand edge of the page content */
     .navbar-expand-md .navbar-nav .nav-item:last-child .nav-link {
         padding-right: 0;
     }
@@ -426,9 +412,9 @@ textarea:focus-visible {
     content: none;
 }
 
-/* Narrow arrows in deep brass. Bootstrap's arrows are white SVG pictures set as
-   background images, so we swap in the same arrow shapes filled with deep brass (%237A5C2E
-   is #7A5C2E written for a URL). Full opacity keeps them clear enough to see (WCAG 1.4.11). */
+/* Arrows: Bootstrap's arrows are white, which would not show on parchment.
+   The carousel-dark class in index.html is Bootstrap's own setting that turns them dark.
+   These rules only make the arrow buttons narrower and slightly see-through until hovered. */
 .review-carousel .carousel-control-prev,
 .review-carousel .carousel-control-next {
     width: 2.5rem;
@@ -442,14 +428,6 @@ textarea:focus-visible {
     opacity: 1;
 }
 
-.review-carousel .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237A5C2E'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/%3e%3c/svg%3e");
-}
-
-.review-carousel .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237A5C2E'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
-}
-
 .review-carousel .carousel-control-prev-icon,
 .review-carousel .carousel-control-next-icon {
     width: 1.5rem;
@@ -457,53 +435,27 @@ textarea:focus-visible {
 }
 
 /* Dots: moved below the quote (Bootstrap places them on top of the slide)
-   and turned into crow feathers: an outline feather for each review,
-   and a solid one for the review on show.
-   The feather is an SVG used as a mask on ::before, so the colour comes from
-   background-color (deep brass, clear enough to see: WCAG 1.4.11). The mask sits
-   on ::before rather than the button so it never clips the keyboard focus outline.
-   Each button is 24px square, big enough to tap (WCAG 2.5.8). */
+   and turned into small brass circles: an outline circle for each review,
+   and a filled one for the review on show.
+   (The earlier feather version is saved in originals/feather-indicators.css.) */
 .review-carousel .carousel-indicators {
     position: static;
     margin: 0.75rem 0 0;
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
 
 .review-carousel .carousel-indicators [data-bs-target] {
-    position: relative;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
     margin: 0;
-    border: 0;
-    background-color: transparent;
+    border-radius: 50%; /* turns the square into a circle */
+    border: 1px solid var(--deep-brass);
+    background-color: transparent; /* outline only */
     opacity: 1;
-    transition: transform 0.2s ease;
 }
 
-.review-carousel .carousel-indicators [data-bs-target]::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: var(--deep-brass);
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.4 2C16 5 16.8 9 15.6 11L13.6 11.6L15.4 12.6C14.8 15.5 13.8 17.6 12.4 19Z'/%3E%3Cpath d='M11.6 2.5C8.4 5.5 7.8 8.5 8.4 10L10.4 10.4L8.6 11.8C9 14.5 10.2 17 11.6 19Z'/%3E%3Cpath d='M12 19V23'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.2' stroke-linejoin='round' stroke-linecap='round'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.4 2C16 5 16.8 9 15.6 11L13.6 11.6L15.4 12.6C14.8 15.5 13.8 17.6 12.4 19Z'/%3E%3Cpath d='M11.6 2.5C8.4 5.5 7.8 8.5 8.4 10L10.4 10.4L8.6 11.8C9 14.5 10.2 17 11.6 19Z'/%3E%3Cpath d='M12 19V23'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
-}
-
-/* The review on show: the same feather, filled in */
-.review-carousel .carousel-indicators .active::before {
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.5 1.8C16.4 5 17.2 9 15.9 11.2L13.9 11.7L15.7 12.8C15 15.7 14 17.8 12.5 19.4Z'/%3E%3Cpath d='M11.5 2.2C8 5.4 7.4 8.5 8.1 10.1L10.1 10.5L8.3 11.9C8.7 14.7 10 17.2 11.5 19.4Z'/%3E%3Cpath d='M12 18.5V23' stroke='black' stroke-width='1.2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cg transform='rotate(30 12 12)'%3E%3Cpath d='M12.5 1.8C16.4 5 17.2 9 15.9 11.2L13.9 11.7L15.7 12.8C15 15.7 14 17.8 12.5 19.4Z'/%3E%3Cpath d='M11.5 2.2C8 5.4 7.4 8.5 8.1 10.1L10.1 10.5L8.3 11.9C8.7 14.7 10 17.2 11.5 19.4Z'/%3E%3Cpath d='M12 18.5V23' stroke='black' stroke-width='1.2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
-}
-
-/* A little flutter when you point at a feather */
-.review-carousel .carousel-indicators [data-bs-target]:hover {
-    transform: rotate(-12deg);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .review-carousel .carousel-indicators [data-bs-target] {
-        transition: none;
-    }
+.review-carousel .carousel-indicators .active {
+    background-color: var(--deep-brass); /* filled for the review on show */
 }
 
 /* 7. Story cards
