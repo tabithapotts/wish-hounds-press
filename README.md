@@ -56,7 +56,7 @@ It is built with HTML, CSS and Bootstrap for layout and responsiveness. The stru
 <!-- DRAFT NOTES (16 November 2026): rewrite in your own words, update the bullets above to match, then delete this comment.
 
 Book page changes:
-- The Crow Girl video bullet above is out of date. The hero now shows the trailer for A Book of Short Stories in a portrait (9:16) frame, like a phone screen. It fills the width on a phone and is never taller than 80% of the screen on a laptop. It has no sound and needs no captions, because the story text appears on screen. A still from the video is the poster, and preload="none" means it only downloads when the visitor presses play.
+- The hero shows the Crow Girl trailer in a portrait (9:16) frame, like a phone screen. It fills the width on a phone and is never taller than 80% of the screen on a laptop. The author's narration matches the text shown on screen, so it needs no separate captions. A still from the video is the poster, and preload="none" means it only downloads when the visitor presses play.
 - The hero is kept short (blurb, one review and the buy buttons) so the buy buttons are visible without scrolling on a laptop.
 - An "About the stories" section above the cards introduces the themes and each story.
 - A "Reviews" section below the cards. Reviews use figure, blockquote and figcaption, with Bootstrap's blockquote classes.
@@ -182,7 +182,7 @@ To run it locally, clone the repository and open `index.html` in a browser.
 
 <!-- DRAFT NOTES (16 November 2026): check, rewrite in your own words, then delete this comment.
 
-- Book trailer: made by the author, originally for TikTok. The background music was removed before it was added to the site, because its copyright status was uncertain.
+- Book trailer: remade from the author's own crow photographs, set in EB Garamond, with the author's narration; built by Claude at the author's request.
 - Crow Girl audio sample: read by the author, taken from the audiobook of A Book of Short Stories (Audible). Used under the ACX terms for Audible Exclusive titles, which allow verbatim excerpts of up to 10% of the audiobook's length on the rights holder's own website to promote it.
 - Reviews: William J Brown in Horrified Magazine, and I. Rosenfeld for the British Fantasy Society. Consider adding links to the original reviews.
 -->
@@ -195,13 +195,14 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Claude converted the logo and the story title plates to WebP, and copied the opening paragraphs of each story from the print PDF into the modals.
 - Claude drafted the legend paragraph, the author bio and the privacy note. I need to check and rewrite these.
 - Everything changed after that date is my own work unless noted here.
+- 22 November 2026: Claude built a new Crow Girl trailer at my request, from my own crow photographs, set in EB Garamond, with my narration. It replaces the earlier trailer.
 - 22 November 2026: at my teacher's request, Claude replaced the contact form script (`assets/js/contact.js`) with a no-JavaScript version: a Web3Forms `redirect` field and a new `thank-you.html` page.
 
 <!-- DRAFT NOTES (16 November 2026): rewrite in your own words for the declaration, then delete this comment.
 
 What Claude did on 16 November:
 - Suggested a portrait video frame, and wrote the HTML and CSS for it.
-- Edited the trailer: removed the music, cut the out-of-date end card, resized it to 720 x 1280, slowed it to two-thirds speed and made a poster still.
+- Edited the original trailer (since replaced): removed the music, cut the out-of-date end card, resized it to 720 x 1280, slowed it to two-thirds speed and made a poster still.
 - Checked the GitHub Pages file size limits and the ACX rules on audio excerpts for Audible Exclusive titles.
 - Cut and converted the Crow Girl audio sample, and wrote the audio player markup, styles and the script that stops the audio when a pop-up closes.
 - Reviewed my new blurb and reviews code, found two validator errors (a duplicate h1 and figcaption inside blockquote) and fixed them at my request.
@@ -209,7 +210,7 @@ What Claude did on 16 November:
 - Split the work into separate commits, including a formatting-only commit.
 
 What I did and decided myself:
-- Chose to make the video portrait, to remove the music, to cut the end card and to slow the video down.
+- Chose to make the video portrait, to remove the music, to cut the end card and to slow the video down (original trailer, since replaced).
 - Wrote the blurb, story descriptions, awards paragraph and chose the reviews.
 - Narrated the audiobook, chose the length of the audio sample (to match the written excerpt) and confirmed the cut point by ear.
 - Decided the house style: curly quotes, italic titles and "Potts’".
