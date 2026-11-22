@@ -248,7 +248,7 @@ I used Claude, in the Claude desktop app, and Claude Code, in VS Code. I used th
 
 **Reflections**
 
-I was an early adopter of AI and have become very comfortable using it. Perhaps I have become too comfortable, as it has made site building so easy that I am finding it easier to focus on the aspects that interest me, such as look and feel, and more reluctant to focus on the aspects I find challenging, such as hand-coding CSS. I will put my hands up and say that, although AI has improved the speed at which I work and compensates for many of my ADHD weaknesses, I am unsure how much using it has improved my coding ability.
+I was an early adopter of AI as I am very interested in technology, and have become very comfortable using it for routine tasks in spite of my reservations about it. Perhaps I have become too comfortable, as it has made site building so easy that I tend to focus on the aspects of it that interest me, such as look and feel, and am more reluctant to focus on the aspects I find challenging. AI has improved the speed at which I work and compensates for many of my ADHD weaknesses, but I am unsure how much it has improved my coding ability, as opposed to my ability to use AI to code.
 
 ## Planned future updates
 
