@@ -104,7 +104,11 @@ Both come from Google Fonts and are held as CSS variables (`--font-heading` and 
 
 Near-black on parchment and parchment on near-black both reach a contrast ratio of 13.8:1, which passes WCAG AA. Cover red is never used as text on near-black, and brass and cover teal are never used as text on parchment, because those pairings fail the contrast requirement.
 
-*(TODO, optional: add the colour palette image and wireframes.)*
+The colour palette comes from my project spec, where the cover red and teal were sampled from the book cover: [colour-palette.png](docs/design/colour-palette.png).
+
+**Wireframes**
+
+I planned the Book page mobile first, with wireframes for mobile, tablet and desktop: [wireframes-index.png](docs/design/wireframes-index.png). The finished page changed in a few places as I built it: the trailer became a portrait video rather than 16:9, the buy buttons moved into the hero rather than a separate buy strip, and a reviews slider was added.
 
 **Layout decisions**
 
