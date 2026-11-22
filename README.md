@@ -246,7 +246,9 @@ I used Claude, in the Claude desktop app, and Claude Code, in VS Code. I used th
 - Made the design decisions in the Layout decisions section above, including the text panels after my teacher's feedback, the printer's flower divider, the simpler navigation and a reviews slider that doesn't move on its own.
 - Split trade and contact information into two pages because one page looked too busy, and chose a portrait frame for the trailer.
 
-*(TODO, optional: add short reflections on AI in code creation, debugging and optimisation, and on its overall effect on your workflow.)*
+**Reflections**
+
+I was an early adopter of AI and have become very comfortable using it. Perhaps I have become too comfortable, as it has made site building so easy that I am finding it easier to focus on the aspects that interest me, such as look and feel, and more reluctant to focus on the aspects I find challenging, such as hand-coding CSS. I will put my hands up and say that, although AI has improved the speed at which I work and compensates for many of my ADHD weaknesses, I am unsure how much using it has improved my coding ability.
 
 ## Planned future updates
 
