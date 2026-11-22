@@ -152,21 +152,22 @@ The validator lists 14 warnings. They read "Due to their dynamic nature, CSS var
 
 ### Lighthouse
 
-Lighthouse was run on every page in mobile and desktop modes. The reports (open the `.html` files in a browser) and screenshots are in `docs/testing/lighthouse/`.
+**All four categories, live site (PageSpeed Insights).** I ran Lighthouse on every live page with Google's [PageSpeed Insights](https://pagespeed.web.dev/) on 22 November 2026, which uses Lighthouse 13.6.0. Screenshots are in `docs/testing/lighthouse/`, named `pagespeed-<page>-mobile.png` and `pagespeed-<page>-desktop.png`.
 
-| Page | Accessibility | Best Practices | SEO |
-| :---- | :---- | :---- | :---- |
-| Book | 100 | 100 | 100 |
-| About | 100 | 100 | 91 |
-| Trade | 100 | 100 | 100 |
-| Contact | 100 | 100 | 100 |
-| Thank you | 100 | 100 | 63 |
+| Page | Performance (mobile / desktop) | Accessibility | Best Practices | SEO |
+| :---- | :---- | :---- | :---- | :---- |
+| Book | 96 / 99 | 100 | 100 | 100 |
+| About | 94 / 100 | 100 | 100 | 91 |
+| Trade | 98 / 100 | 100 | 100 | 100 |
+| Contact | 98 / 100 | 100 | 100 | 100 |
+| Thank you | 99 / 100 | 100 | 100 | 63 |
 
-Scores were the same on mobile and desktop.
+Accessibility, Best Practices and SEO were the same on mobile and desktop. The mobile test simulates a mid-range phone on a slow 4G connection, which is why its performance scores are a little lower.
+
+**Accessibility, Best Practices and SEO, earlier run.** These were also checked with Lighthouse on mobile and desktop for every page, with the same results. The full reports (open the `.html` files in a browser) and screenshots are in `docs/testing/lighthouse/`.
 
 - Thank you (SEO 63): the page has `<meta name="robots" content="noindex">` on purpose, so search engines do not list it. Visitors should only reach it after sending a message.
 - About (SEO 91): the link to the Invisible Works article uses the text "here". Link text should make sense on its own, because screen-reader users often move from link to link. *(TODO: change the link text, then re-run Lighthouse on the About page.)*
-- Performance: *(TODO: run Lighthouse in Chrome DevTools on the live site with all four categories ticked, and add the scores and screenshots.)*
 
 ### Other testing
 
@@ -174,14 +175,15 @@ Scores were the same on mobile and desktop.
 
 ## Screenshots
 
-*(TODO: add desktop and mobile screenshots of every page.)*
+Full-page screenshots of every page, on desktop (1280 pixels wide) and mobile (390 pixels wide). Click a link to open the screenshot.
 
 | Page | Desktop | Mobile |
 | :---- | :---- | :---- |
-| Book page | to add | to add |
-| About | to add | to add |
-| Trade | to add | to add |
-| Contact | to add | to add |
+| Book page | [index-desktop.png](docs/screenshots/index-desktop.png) | [index-mobile.png](docs/screenshots/index-mobile.png) |
+| About | [about-desktop.png](docs/screenshots/about-desktop.png) | [about-mobile.png](docs/screenshots/about-mobile.png) |
+| Trade | [trade-desktop.png](docs/screenshots/trade-desktop.png) | [trade-mobile.png](docs/screenshots/trade-mobile.png) |
+| Contact | [contact-desktop.png](docs/screenshots/contact-desktop.png) | [contact-mobile.png](docs/screenshots/contact-mobile.png) |
+| Thank you | [thank-you-desktop.png](docs/screenshots/thank-you-desktop.png) | [thank-you-mobile.png](docs/screenshots/thank-you-mobile.png) |
 
 ## Bugs and errors
 
@@ -229,7 +231,7 @@ I used Claude, in the Claude desktop app, and Claude Code, in VS Code. I used th
 - Wrote the audio player code. Edited the original trailer, and later built the new trailer from my photographs.
 - Found and fixed HTML validator errors, and ran Lighthouse and validation checks.
 - Replaced the contact form script with a version that needs no JavaScript, at my teacher's request.
-- Created the planning issues on my GitHub project board, and wrote commit messages.
+- Copied the planning issues onto my GitHub project board from my User Journey notes, and wrote about three-quarters of the commit messages.
 
 **What I decided and did myself**
 
