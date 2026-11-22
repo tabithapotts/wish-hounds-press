@@ -157,7 +157,7 @@ The validator lists 14 warnings. They read "Due to their dynamic nature, CSS var
 | Page | Performance (mobile / desktop) | Accessibility | Best Practices | SEO |
 | :---- | :---- | :---- | :---- | :---- |
 | Book | 96 / 99 | 100 | 100 | 100 |
-| About | 94 / 100 | 100 | 100 | 91 |
+| About | 92 / 99 | 100 | 100 | 100 |
 | Trade | 98 / 100 | 100 | 100 | 100 |
 | Contact | 98 / 100 | 100 | 100 | 100 |
 | Thank you | 99 / 100 | 100 | 100 | 63 |
@@ -167,7 +167,7 @@ Accessibility, Best Practices and SEO were the same on mobile and desktop. The m
 **Accessibility, Best Practices and SEO, earlier run.** These were also checked with Lighthouse on mobile and desktop for every page, with the same results. The full reports (open the `.html` files in a browser) and screenshots are in `docs/testing/lighthouse/`.
 
 - Thank you (SEO 63): the page has `<meta name="robots" content="noindex">` on purpose, so search engines do not list it. Visitors should only reach it after sending a message.
-- About (SEO 91): the link to the Invisible Works article uses the text "here". Link text should make sense on its own, because screen-reader users often move from link to link. *(TODO: change the link text, then re-run Lighthouse on the About page.)*
+- About (SEO 91 in the earlier run, now 100): the link to the Invisible Works article used the text "here". Link text should make sense on its own, because screen-reader users often move from link to link. I changed it to "Read more about the Wisht Hounds of Dartmoor", with the link on "the Wisht Hounds of Dartmoor", and re-ran PageSpeed Insights on the About page.
 
 ### Other testing
 
