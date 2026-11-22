@@ -16,7 +16,8 @@ In VS Code, press Cmd + Shift + F and search for `TODO` to jump to each one.
 
 - [x] `index.html`: ebook and audiobook buttons link to Amazon UK with `?tag=mrstabithapot-21`. The paperback button links to IngramSpark
 - [ ] Footer on all four pages: Instagram and Facebook links still point to `#`
-- [ ] `contact.html`: localhost Web3Forms key added for testing. Swap in the live site key before launch, then send a test message
+- [x] Web3Forms access key added to the contact and newsletter forms (the same key works locally and on the live site)
+- [ ] Send a test message from both forms on the live site and check the thank-you page appears
 - [x] `about.html`: newsletter form now uses Web3Forms (signups arrive by email; add them to the mailing list by hand). Change its `redirect` too when wishhoundspress.com goes live
 
 ## Files to add
