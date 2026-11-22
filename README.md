@@ -1,9 +1,8 @@
 # Wish Hounds Press
 
 **Live site:** [https://tabithapotts.github.io/wish-hounds-press/](https://tabithapotts.github.io/wish-hounds-press/)
-*(TODO: confirm this link once GitHub Pages is switched on, and note the wishhoundspress.com address if it is pointed at the site.)*
 
-Wish Hounds Press is a four-page website for an independent horror imprint, named after the ghostly hounds said to roam the Devon moors. It presents the imprint's first title, *A Book of Short Stories*, and points readers to the retailers where they can buy it.
+Wish Hounds Press is a four-page website (plus a thank-you page for the contact form) for an independent horror imprint, named after the ghostly hounds said to roam the Devon moors. It presents the imprint's first title, *A Book of Short Stories*, and points readers to the retailers where they can buy it.
 
 ## Table of contents
 
