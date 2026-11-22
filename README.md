@@ -138,9 +138,9 @@ To run it locally, clone the repository and open `index.html` in a browser.
 
 *(TODO: complete after testing, and add the screenshots of each result.)*
 
-- HTML validated with the W3C Markup Validator: result to add.
-- CSS validated with the W3C CSS Validator (Jigsaw): result to add.
-- Lighthouse scores for Performance, Accessibility, Best Practices and SEO: results to add.
+- HTML validated with the W3C Markup Validator (validator.w3.org): all five pages (Book, About, Trade, Contact and Thank you) pass with no errors or warnings. The Book page first showed 7 errors, fixed with ARIA roles (see Bugs and errors). Screenshots are in `docs/testing/validation/`.
+- CSS validated with the W3C CSS Validator (Jigsaw): `assets/css/styles.css` is valid with no errors. The 10 warnings all read "Due to their dynamic nature, CSS variables are currently not statically checked". This is the validator's standard message for any stylesheet that uses CSS variables, not a fault.
+- Lighthouse scores for Performance, Accessibility, Best Practices and SEO, on mobile and desktop for every page: reports and screenshots are in `docs/testing/lighthouse/`.
 - Responsive layout checked on desktop, tablet and mobile widths: notes to add.
 
 ## Screenshots
@@ -157,6 +157,8 @@ To run it locally, clone the repository and open `index.html` in a browser.
 ## Bugs and errors
 
 *(TODO: record the bugs you meet and how you fixed them, and list any that remain.)*
+
+- W3C validator errors on the Book page (22 November 2026): the validator reported 7 errors. A plain `div` is not allowed an `aria-label` or `aria-labelledby` unless it also has a `role`. The reviews carousel had `aria-label` without a role, and the six story pop-ups had `aria-labelledby` without one. Bootstrap adds `role="dialog"` to a pop-up with JavaScript when it opens, but the validator only reads the HTML. Fixed by adding `role="region"` to the carousel (the standard role for an accessible carousel) and `role="dialog"` to each pop-up. The Book page now passes with no errors.
 
 <!-- DRAFT NOTES (16 November 2026): rewrite in your own words, then delete this comment.
 
