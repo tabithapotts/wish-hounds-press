@@ -78,7 +78,7 @@ About page changes:
 
 **Contact page**
 
-- A contact form using Web3Forms with an immediate on-screen confirmation, so the sender knows the message went through.
+- A contact form using Web3Forms, with no JavaScript. The browser checks the required fields and the email address before sending, and after sending the visitor is taken to a thank-you page (`thank-you.html`), so they know the message went through.
 - A privacy note explaining how visitors' details are used.
 
 <!-- DRAFT NOTE (17 November 2026): rewrite in your own words, then delete this comment.
@@ -195,6 +195,7 @@ To run it locally, clone the repository and open `index.html` in a browser.
 - Claude converted the logo and the story title plates to WebP, and copied the opening paragraphs of each story from the print PDF into the modals.
 - Claude drafted the legend paragraph, the author bio and the privacy note. I need to check and rewrite these.
 - Everything changed after that date is my own work unless noted here.
+- 22 November 2026: at my teacher's request, Claude replaced the contact form script (`assets/js/contact.js`) with a no-JavaScript version: a Web3Forms `redirect` field and a new `thank-you.html` page.
 
 <!-- DRAFT NOTES (16 November 2026): rewrite in your own words for the declaration, then delete this comment.
 

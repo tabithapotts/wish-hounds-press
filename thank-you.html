@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Only reached after sending the contact form, so search engines should not list it -->
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Thank you for contacting Wish Hounds Press."
+    />
+    <title>Thank you | Wish Hounds Press</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <!-- Google Fonts: IM Fell English (headings) and EB Garamond (body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;family=IM+Fell+English:ital@0;1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS first, then our own styles so that ours win -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ===== Header and navbar (the same on every page) ===== -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <img
+              src="assets/images/whp-logo-new.webp"
+              alt=""
+              width="56"
+              height="56"
+            />
+            Wish Hounds Press
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trade.html">Trade</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Web3Forms opens this page after a message is sent from the contact form
+           (the "redirect" field in contact.html). -->
+      <section class="section" aria-labelledby="thanks-title">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h1 id="thanks-title">Thank you</h1>
+              <p>
+                Your message has been sent. We will reply as soon as we can.
+              </p>
+              <p>
+                <a href="index.html" class="btn btn-buy">Back to the book</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer (the same on every page) ===== -->
+    <footer class="site-footer py-4">
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-md-4">
+            <p class="mb-1">Wish Hounds Press</p>
+            <p class="mb-0"><em>Stories to haunt you</em></p>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled mb-0">
+              <li><a href="index.html">Book</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="trade.html">Trade</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html#privacy">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <!-- TODO: replace each # with the real profile address, and delete any you do not use -->
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Wish Hounds Press on Instagram (opens in a new tab)"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Wish Hounds Press on Facebook (opens in a new tab)"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="small-print mt-3 mb-0">
+          &copy; 2026 Wish Hounds Press. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript: needed for the mobile menu and the story modals -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

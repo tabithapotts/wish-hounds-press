@@ -96,7 +96,10 @@
                 <a href="trade.html">trade page</a>.
               </p>
 
-              <!-- Web3Forms sends each message to the email address linked to this access key.
+              <!-- The form works without any JavaScript: the browser sends it straight to Web3Forms,
+                   which emails it to us and then opens thank-you.html (see the "redirect" field).
+                   The required fields and type="email" give instant feedback before sending.
+                   Web3Forms sends each message to the email address linked to this access key.
                    The key is designed to be public, so it is safe in the page code.
                    TODO: this is the localhost (testing) key. Swap in the live site key before launch. -->
               <form
@@ -112,7 +115,14 @@
                 <input
                   type="hidden"
                   name="subject"
-                  value="New message from wishhoundspress.com"
+                  value="New message from wishhoundspress.co.uk"
+                />
+                <!-- After the message is sent, Web3Forms takes the visitor to our own thank-you page.
+                     It must be the full web address, because Web3Forms sends the visitor there from its server. -->
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://wishhoundspress.co.uk/thank-you.html"
                 />
                 <!-- A hidden box that real visitors never tick; it catches spam robots -->
                 <input
@@ -179,14 +189,6 @@
                   Send message
                 </button>
               </form>
-
-              <!-- The confirmation appears here. assets/js/contact.js fills it in. -->
-              <div
-                id="form-message"
-                class="form-message mt-3 d-none"
-                role="status"
-                aria-live="polite"
-              ></div>
             </div>
           </div>
         </div>
@@ -274,7 +276,5 @@
       integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
       crossorigin="anonymous"
     ></script>
-    <!-- Our own script: shows the "message sent" confirmation on the page -->
-    <script src="assets/js/contact.js"></script>
   </body>
 </html>

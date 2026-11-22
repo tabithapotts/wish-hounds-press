@@ -627,23 +627,6 @@ textarea:focus-visible {
     box-shadow: none;
 }
 
-/* The success and error messages under the contact form */
-.form-message {
-    border: 2px solid var(--near-black);
-    border-radius: 0;
-    padding: 1rem;
-}
-
-.form-message-success {
-    background-color: var(--deep-teal);
-    color: var(--parchment);
-}
-
-.form-message-error {
-    background-color: var(--cover-red);
-    color: var(--parchment);
-}
-
 /* The trade information list */
 .trade-list dt {
     font-family: var(--font-heading);
